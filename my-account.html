@@ -27,7 +27,8 @@
       <div class="site-header">
         <nav class="navbar navbar-expand-lg">
           <div class="navbar-content-left">
-            <button class="navbar-toggler" type="button" id="menu-toggle" data-toggle="collapse"
+            <div class="navbar--view-lt">
+              <button class="navbar-toggler" type="button" id="menu-toggle" data-toggle="collapse"
               data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
               aria-label="Toggle navigation">
               <span class="navbar-toggler-icon">
@@ -37,25 +38,30 @@
               </span>
             </button>
             <h2 class="heading-left">My Account</h2>
+            </div>
           </div>
 
 
           <div class="navbar-content-right">
-            <ul class="navbar-nav ml-auto mt-lg-0">
+            <ul class="navbar-nav ml-auto mt-lg-0 user-nav-dropdown">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="false">
-                  <i class="fa fa-user" aria-hidden="true"></i> Lindsay Harrington
-                  <span class="down-arrow">
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                  </span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right">
-                  <a class="dropdown-item" href="#">Settings</a>
-                  <a class="dropdown-item" href="#">Logout</a>
-                </div>
-              </li>
-            </ul>
+                 <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                   <i class="fa fa-user" aria-hidden="true"></i> Lindsay Harrington
+                   <span class="down-arrow">
+                     <i class="fa fa-angle-down" aria-hidden="true"></i>
+                   </span>
+                 </a>
+                 <div class="dropdown-menu dropdown-menu-right">
+                   <a class="dropdown-item" href="#">
+                    <strong>Lindsay Harrington</strong>
+                    <small>Super Admin</small>
+                   </a>
+                   <a class="dropdown-item" href="#">My Profile</a>
+                   <a class="dropdown-item red-link" href="#">Logout</a>
+                 </div>
+               </li>
+           </ul>
           </div>
         </nav>
       </div>
@@ -67,14 +73,24 @@
         </div>
         <ul class="list-group">
           <li>
-            <a href="index.html" class="list-group-item">
-              <span class="sidebar-list-icon home-icon"
-                style="background-image: url(assets/images/home-gray.png);"></span> Dashboard
-            </a>
+            <div class="dropdown theme-dropdown">
+               <a class="list-group-item theme-dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+               <span class="sidebar-list-icon home-icon"
+                  style="background-image: url(assets/images/home-gray.png);"></span> Dashboard
+               <span class="down-arrow">
+                  <i class="fa fa-angle-down" aria-hidden="true"></i>
+               </span>
+               </a>
+               <div class="dropdown-menu theme-dropdown-menu">
+                  <a class="dropdown-item" href="global-leak-efficiency-audit.html">Global Leak/Efficiency Audit</a>
+                  <a class="dropdown-item" href="global-leak-status.html">Global Leak Status</a>
+               </div>
+            </div>
           </li>
           <li>
             <div class="dropdown profile-dropdown show">
-              <a class="list-group-item active dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+              <a class="list-group-item active profile-dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="true">
                 <span class="sidebar-list-icon company-icon"
                   style="background-image: url(assets/images/company-gray.png);"></span> Company Profile
@@ -83,7 +99,7 @@
                 </span>
               </a>
 
-              <div class="dropdown-menu profile-dropdown-menu">
+              <div class="dropdown-menu profile-dropdown-menu show">
                 <a class="dropdown-item" href="edit-company-profile.html">Edit Profile</a>
                 <a class="dropdown-item" href="company-user.html">Users</a>
                 <a class="dropdown-item" href="company-properties.html">Properties</a>
@@ -121,8 +137,7 @@
       </div>
       <!-- #sidebar-wrapper -->
     </div>
-
-
+    
     <!-- Page Content -->
     <div id="page-content-wrapper">
       <div id="main-wrapper">
@@ -131,52 +146,57 @@
             <div class="edit-form">
               <form>
                 <div class="form-group row">
-                  <label class="col-sm-3 col-form-label">Name</label>
-                  <div class="col-sm-3">
+                  <label class="col-sm-4 col-md-3 col-form-label">Name</label>
+                  <div class="col-sm-4 col-md-3">
                     <input type="text" class="form-control" value="Raunak">
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-4 col-md-3">
                     <input type="text" class="form-control" value="Agarwal">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label class="col-sm-3 col-form-label">Address</label>
-                  <div class="col-sm-6">
+                  <label class="col-sm-4 col-md-3 col-form-label">Address</label>
+                  <div class="col-sm-8 col-md-6">
                     <input type="text" class="form-control" value="711-2880 Nulla St. Mankato">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label class="col-sm-3 col-form-label">Email</label>
-                  <div class="col-sm-6">
+                  <label class="col-sm-4 col-md-3 col-form-label">Email</label>
+                  <div class="col-sm-8 col-md-6">
                     <input type="text" class="form-control" value="raunak.clix@gmail.com">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label class="col-sm-3 col-form-label">Contact Number</label>
-                  <div class="col-sm-6">
+                  <label class="col-sm-4 col-md-3 col-form-label">Contact Number</label>
+                  <div class="col-sm-8 col-md-6">
                     <input type="text" class="form-control" value="1234567890">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label class="col-sm-3 col-form-label">ZIP</label>
-                  <div class="col-sm-6">
+                  <label class="col-sm-4 col-md-3 col-form-label">ZIP</label>
+                  <div class="col-sm-8 col-md-6">
                     <input type="text" class="form-control" value="31320">
                     <small>Should be of the format 12345 or 12345-1234</small>
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label class="col-sm-3 col-form-label">Image</label>
-                  <div class="col-sm-6">
+                  <label class="col-sm-4 col-md-3 col-form-label">Image</label>
+                  <div class="col-sm-8 col-md-6">
                     <div class="uploader-wrap">
-                      <input type="file" class="form-control-file">
+                      <div id='profile-upload'>
+                        <div class="hvr-profile-img">
+                          <input type="file" name="logo" id='getval'  class="upload">
+                          <div id="file-upload-filename"></div>
+                        </div>
+                      </div>
                       <span class="file-group-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-                    </div>
+                     </div>
                     <small>For best viewing, image dimension should be 750×750</small>
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label class="col-sm-3 col-form-label">Is this for business or personal use?</label>
-                  <div class="col-sm-6">
+                  <label class="col-sm-4 col-md-3 col-form-label">Is this for business or personal use?</label>
+                  <div class="col-sm-8 col-md-6">
                     <div class="select-wrap">
                       <select class="form-control">
                         <option>Business</option>
@@ -187,8 +207,8 @@
                   </div>
                 </div>
                 <div class="form-group row add-border">
-                  <label class="col-sm-3 col-form-label">Email Notification</label>
-                  <div class="col-sm-6">
+                  <label class="col-sm-4 col-md-3 col-form-label">Email Notification</label>
+                  <div class="col-sm-8 col-md-6">
                     <div class="form-check">
                       <input type="checkbox" class="form-check-input" checked="">
                       <label class="form-check-label">Get deals and promotions right on your inbox!</label>
@@ -267,6 +287,22 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="assets/js/custom.js"></script>
-</body>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 
+<script>
+  document.getElementById('getval').addEventListener('change', readURL, true);
+  function readURL(){
+      var file = document.getElementById("getval").files[0];
+      var reader = new FileReader();
+      reader.onloadend = function(){
+          document.getElementById('profile-upload').style.backgroundImage = "url(" + reader.result + ")";        
+      }
+      if(file){
+          reader.readAsDataURL(file);
+      }else{
+      }
+  }
+</script>   
+
+</body>
 </html>

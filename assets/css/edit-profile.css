@@ -39,19 +39,6 @@
     outline: none;
 }
 
-.uploader-wrap{
-    position: relative;
-}
-
-.uploader-wrap .file-group-btn {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
-
 .action-wrapper ul {
     list-style: none;
     padding: 0;
@@ -214,12 +201,16 @@
     padding: 10px 0;
 }
 
-.property-name {
+.per-property-content .property-name {
     font-size: 14px;
     line-height: 24px;
     color: #454545;
     font-weight: 500;
     margin: 0;
+    background-color: transparent;
+    display: block;
+    padding: 0;
+    border-radius: 0;
 }
 
 .property-days {

@@ -24,12 +24,18 @@ $(document).ready(function(){
 
 
 // sidebar-toggle-btn-js
-$(".profile-dropdown").click(function(){
-    $(".dropdown-toggle").toggleClass("toggle-down-arrow");
+$(document).ready(function(){ 
+// $(".profile-dropdown").click(function(){
+//     $(".profile-dropdown-toggle").toggleClass("toggle-down-arrow");
+// });
+$('.theme-dropdown').click( function(e) {
+    $(".theme-dropdown-menu").toggle(500);
+    // $(".theme-dropdown-toggle").toggleClass("toggle-down-arrow");
+});
 });
 
-// search-select-js
 
+// search-select-js
 $(".select2-input").click(function(e) {
     e.preventDefault();
     $(this).parent().find('.select2-list').toggle('active');

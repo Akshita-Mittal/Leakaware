@@ -1,0 +1,1861 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+         rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+      <!-- Custom styles for this template -->
+      <link href="assets/css/sidebar.css" rel="stylesheet">
+      <link href="assets/css/main.css" rel="stylesheet">
+      <title>Dashboard</title>
+   </head>
+   <body>
+      <div id="overlay"></div>
+      <div class="d-flex" id="wrapper">
+         <div class="top-side-wrap">
+            <!-- top-header-start-->
+            <div class="site-header">
+               <nav class="navbar navbar-expand-lg">
+                  <div class="navbar-content-left">
+                     <div class="navbar--view-lt">
+                        <button class="navbar-toggler" type="button" id="menu-toggle" data-toggle="collapse"
+                           data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                           aria-expanded="false" aria-label="Toggle navigation">
+                           <span class="navbar-toggler-icon">
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                           </span>
+                        </button>
+                        <h2 class="heading-left">Dashboard</h2>
+                     </div>
+                  </div>
+                  <div class="navbar-content-right">
+                     <ul class="navbar-nav ml-auto mt-lg-0 user-nav-dropdown">
+                        <li class="nav-item dropdown">
+                           <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                             aria-expanded="false">
+                             <i class="fa fa-user" aria-hidden="true"></i> Lindsay Harrington
+                             <span class="down-arrow">
+                               <i class="fa fa-angle-down" aria-hidden="true"></i>
+                             </span>
+                           </a>
+                           <div class="dropdown-menu dropdown-menu-right">
+                             <a class="dropdown-item" href="#">
+                              <strong>Lindsay Harrington</strong>
+                              <small>Super Admin</small>
+                             </a>
+                             <a class="dropdown-item" href="#">My Profile</a>
+                             <a class="dropdown-item red-link" href="#">Logout</a>
+                           </div>
+                         </li>
+                     </ul>
+                  </div>
+               </nav>
+            </div>
+            <!-- top-header-ends-->
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper" style="display: none;">
+               <div class="sidebar-header">
+                  <img src="assets/images/logo.png" alt="logo" />
+               </div>
+               <ul class="list-group">
+                  <li>
+                     <a href="dashboard.html" class="list-group-item active">
+                     <span class="sidebar-list-icon home-icon"
+                        style="background-image: url(assets/images/home-gray.png);"></span> Dashboard
+                     </a>
+                  </li>
+                  <li>
+                     <div class="dropdown profile-dropdown">
+                        <a class="list-group-item dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                        <span class="sidebar-list-icon company-icon"
+                           style="background-image: url(assets/images/company-gray.png);"></span> Company
+                        Profile
+                        <span class="down-arrow">
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                        </a>
+                        <div class="dropdown-menu profile-dropdown-menu">
+                           <a class="dropdown-item" href="edit-company-profile.html">Edit Profile</a>
+                           <a class="dropdown-item" href="company-user.html">Users</a>
+                           <a class="dropdown-item" href="company-properties.html">Properties</a>
+                           <a class="dropdown-item" href="company-setting.html">Company Settings</a>
+                        </div>
+                     </div>
+                  </li>
+                  <hr>
+               </ul>
+               <div class="sidebar-bottom">
+                  <ul class="sidebar-bottom-menu">
+                     <li>
+                        <a href="#" class="fixed-sidebar-menu">
+                        Properties <span class="add-icon"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                        </a>
+                        <ul class="sidebar-bottom-submenu">
+                           <li><a href="pearl-plaza.html">Pearl Plaza</a></li>
+                           <li><a href="#">Property B</a></li>
+                           <li><a href="#">Property Delta</a></li>
+                           <li><a href="#">Property Gamma</a></li>
+                           <li><a href="#">Property Sigma</a></li>
+                           <li><a href="#">Property T</a></li>
+                           <li><a href="#">Property U</a></li>
+                           <li><a href="#">Property V</a></li>
+                           <li><a href="#">Property W1</a></li>
+                           <li><a href="#">Property W2</a></li>
+                           <li><a href="#">Property W3</a></li>
+                           <li><a href="#">Property W4</a></li>
+                           <li><a href="#">Property W5</a></li>
+                           <li><a href="#">Property W6</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <!-- #sidebar-wrapper -->
+         </div>
+         <!-- Page Content -->
+         <div id="page-content-wrapper">
+            <div id="tabs">
+               <div class="row">
+                  <div class="col-md-12">
+                     <nav>
+                        <div class="nav nav-tabs nav-fill col-md-8" id="nav-tab" role="tablist">
+                           <a class="nav-item nav-link active" id="Efficiency-tab" data-toggle="tab"
+                              href="#Efficiency" role="tab" aria-controls="Efficiency" aria-selected="true">Global Leak/Efficiency Audit</a>
+                           <a class="nav-item nav-link" id="Status-tab" data-toggle="tab" href="#Status" role="tab"
+                              aria-controls="Status" aria-selected="false">Global Leak Status</a>
+                        </div>
+                     </nav>
+                     <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="Efficiency" role="tabpanel"
+                           aria-labelledby="Efficiency-tab">
+                           <div class="overview-content-top">
+                              <div class="overvew-content-left">
+                                 <h2 class="site-content-heading">Overview</h2>
+                                 <span class="proprty-icon">
+                                    <i class="fa fa-building-o" aria-hidden="true"></i>
+                                    <p>5 Properties</p>
+                                 </span>
+                              </div>
+                              <div class="overvew-content-right">
+                                 <div class="select-wrapper">
+                                    <label>Property:</label>
+                                    <select class="js-select2 check-select">
+                                       <option>All</option>
+                                       <option>Pearl Plaza</option>
+                                       <option>Property Delta</option>
+                                       <option>Property Gamma</option>
+                                       <option>Property Sigma</option>
+                                    </select>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="overview-table table-scrollbar" style="overflow-x: auto">
+                              <table class="table">
+                                 <thead>
+                                    <tr>
+                                       <th scope="col">Profile</th>
+                                       <th scope="col">Efficiency Rating</th>
+                                       <th scope="col">Leak Status</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td rowspan="4">
+                                          <div class="profile-list">
+                                             <ul>
+                                                <li>
+                                                   <span class="list-icon list-icon-blue">
+                                                   <img src="assets/images/plans.png" />
+                                                   </span>
+                                                   <div class="list-desc">
+                                                      <span class="list-no list-no-blue">12</span>
+                                                      <small>Floor Plans</small>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span class="list-icon list-icon-purple">
+                                                   <img src="assets/images/units.png" />
+                                                   </span>
+                                                   <div class="list-desc">
+                                                      <span class="list-no list-no-purple">28</span>
+                                                      <small>Units</small>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span class="list-icon list-icon-green">
+                                                   <img src="assets/images/meters.png" />
+                                                   </span>
+                                                   <div class="list-desc">
+                                                      <span class="list-no list-no-green">16</span>
+                                                      <small>Water meters</small>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span class="list-icon list-icon-orange">
+                                                   <img src="assets/images/audits.png" />
+                                                   </span>
+                                                   <div class="list-desc">
+                                                      <span class="list-no list-no-orange">4</span>
+                                                      <small>Audits</small>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                             <div class="view-profile-wrap">
+                                                <a href="#">View Company Profile <i
+                                                   class="fa fa-angle-right"
+                                                   aria-hidden="true"></i></a>
+                                             </div>
+                                          </div>
+                                       </td>
+                                       <td class="red-bg red-border">
+                                          <div class="rating-list">
+                                             <ul>
+                                                <li>
+                                                   <div class="rating-status">
+                                                      <span class="rating-percentage">60%</span>
+                                                      <span class="list-no list-no-red">Low</span>
+                                                   </div>
+                                                   <div class="chart-wrap">
+                                                      <div class="rating-chart" id="chart1"></div>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </td>
+                                       <td class="red-bg">
+                                          <div class="rating-list">
+                                             <ul>
+                                                <li>
+                                                   <div class="rating-status">
+                                                      <span class="rating-percentage">0%</span>
+                                                      <span class="list-no list-no-red">Major Leak</span>
+                                                   </div>
+                                                   <!-- <span class="rating-icon rating-icon-low"><img src="" /></span> -->
+                                                   <div class="chart-wrap">
+                                                      <div class="rating-chart" id="chart2"></div>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td class="orange-bg orange-border">
+                                          <div class="rating-list">
+                                             <ul>
+                                                <li>
+                                                   <div class="rating-status">
+                                                      <span class="rating-percentage">0%</span>
+                                                      <span class="list-no list-no-orange">Medium</span>
+                                                   </div>
+                                                   <!-- <span class="rating-icon rating-icon-medium"><img src="" /></span> -->
+                                                   <div class="chart-wrap">
+                                                      <div class="rating-chart" id="chart3"></div>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </td>
+                                       <td class="orange-bg">
+                                          <div class="rating-list">
+                                             <ul>
+                                                <li>
+                                                   <div class="rating-status">
+                                                      <span class="rating-percentage">10%</span>
+                                                      <span class="list-no list-no-orange">Minor
+                                                      Leak</span>
+                                                   </div>
+                                                   <!-- <span class="rating-icon rating-icon-medium"><img src="" /></span> -->
+                                                   <div class="chart-wrap">
+                                                      <div class="rating-chart" id="chart4"></div>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td class="green-bg green-border">
+                                          <div class="rating-list">
+                                             <ul>
+                                                <li>
+                                                   <div class="rating-status">
+                                                      <span class="rating-percentage">20%</span>
+                                                      <span class="list-no list-no-green">High</span>
+                                                   </div>
+                                                   <!-- <span class="rating-icon rating-icon-high"><img src="" /></span> -->
+                                                   <div class="chart-wrap">
+                                                      <div class="rating-chart" id="chart5"></div>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </td>
+                                       <td class="green-bg">
+                                          <div class="rating-list">
+                                             <ul>
+                                                <li>
+                                                   <div class="rating-status">
+                                                      <span class="rating-percentage">40%</span>
+                                                      <span class="list-no list-no-green">No Leak</span>
+                                                   </div>
+                                                   <!-- <span class="rating-icon rating-icon-high"><img src="" /></span> -->
+                                                   <div class="chart-wrap">
+                                                      <div class="rating-chart" id="chart6"></div>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                           <div class="overview-table overview-table-mob">
+                              <table class="table">
+                                 <thead>
+                                    <tr>
+                                       <th scope="col">Profile</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td rowspan="4">
+                                          <div class="profile-list">
+                                             <ul>
+                                                <li>
+                                                   <span class="list-icon list-icon-blue">
+                                                   <img src="assets/images/plans.png" />
+                                                   </span>
+                                                   <div class="list-desc">
+                                                      <span class="list-no list-no-blue">12</span>
+                                                      <small>Floor Plans</small>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span class="list-icon list-icon-purple">
+                                                   <img src="assets/images/units.png" />
+                                                   </span>
+                                                   <div class="list-desc">
+                                                      <span class="list-no list-no-purple">28</span>
+                                                      <small>Units</small>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span class="list-icon list-icon-green">
+                                                   <img src="assets/images/meters.png" />
+                                                   </span>
+                                                   <div class="list-desc">
+                                                      <span class="list-no list-no-green">16</span>
+                                                      <small>Water meters</small>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span class="list-icon list-icon-orange">
+                                                   <img src="assets/images/audits.png" />
+                                                   </span>
+                                                   <div class="list-desc">
+                                                      <span class="list-no list-no-orange">4</span>
+                                                      <small>Audits</small>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                             <div class="view-profile-wrap">
+                                                <a href="#">View Company Profile <i
+                                                   class="fa fa-angle-right"
+                                                   aria-hidden="true"></i></a>
+                                             </div>
+                                          </div>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                           <div class="overview-table overview-table-mob" style="overflow-x: auto">
+                              <table class="table">
+                                 <thead>
+                                    <tr>
+                                       <th scope="col">Efficiency Rating</th>
+                                       <th scope="col">Leak Status</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td class="red-bg red-border" width="150">
+                                          <div class="rating-list">
+                                             <ul>
+                                                <li>
+                                                   <div class="rating-status">
+                                                      <span class="rating-percentage">60%</span>
+                                                      <span class="list-no list-no-red">Low</span>
+                                                   </div>
+                                                   <div class="chart-wrap">
+                                                      <div id="chart1" style="width: 100px;"></div>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </td>
+                                       <td class="red-bg" width="150">
+                                          <div class="rating-list">
+                                             <ul>
+                                                <li>
+                                                   <div class="rating-status">
+                                                      <span class="rating-percentage">0%</span>
+                                                      <span class="list-no list-no-red">Major Leak</span>
+                                                   </div>
+                                                   <!-- <span class="rating-icon rating-icon-low"><img src="" /></span> -->
+                                                   <div class="chart-wrap">
+                                                      <div id="chart2" style="width: 100px;"></div>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td class="orange-bg orange-border" width="150">
+                                          <div class="rating-list">
+                                             <ul>
+                                                <li>
+                                                   <div class="rating-status">
+                                                      <span class="rating-percentage">0%</span>
+                                                      <span class="list-no list-no-orange">Medium</span>
+                                                   </div>
+                                                   <!-- <span class="rating-icon rating-icon-medium"><img src="" /></span> -->
+                                                   <div class="chart-wrap">
+                                                      <div id="chart3" style="width: 100px;"></div>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </td>
+                                       <td class="orange-bg" width="150">
+                                          <div class="rating-list">
+                                             <ul>
+                                                <li>
+                                                   <div class="rating-status">
+                                                      <span class="rating-percentage">10%</span>
+                                                      <span class="list-no list-no-orange">Minor
+                                                      Leak</span>
+                                                   </div>
+                                                   <!-- <span class="rating-icon rating-icon-medium"><img src="" /></span> -->
+                                                   <div class="chart-wrap">
+                                                      <div id="chart4" style="width: 100px;"></div>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td class="green-bg green-border" width="150">
+                                          <div class="rating-list">
+                                             <ul>
+                                                <li>
+                                                   <div class="rating-status">
+                                                      <span class="rating-percentage">20%</span>
+                                                      <span class="list-no list-no-green">High</span>
+                                                   </div>
+                                                   <!-- <span class="rating-icon rating-icon-high"><img src="" /></span> -->
+                                                   <div class="chart-wrap">
+                                                      <div id="chart5" style="width: 100px;"></div>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </td>
+                                       <td class="green-bg" width="150">
+                                          <div class="rating-list">
+                                             <ul>
+                                                <li>
+                                                   <div class="rating-status">
+                                                      <span class="rating-percentage">40%</span>
+                                                      <span class="list-no list-no-green">No Leak</span>
+                                                   </div>
+                                                   <!-- <span class="rating-icon rating-icon-high"><img src="" /></span> -->
+                                                   <div class="chart-wrap">
+                                                      <div id="chart6" style="width: 100px;"></div>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                           <div class="property-wrap">
+                              <div class="property-content-top">
+                                 <h2 class="site-content-heading">Properties</h2>
+                                 <a href="#" class="new-btn">
+                                 <i class="fa fa-plus" aria-hidden="true"></i> New Property
+                                 </a>
+                              </div>
+                              <div id="property-tabs">
+                                 <div class="row">
+                                    <div class="col-md-12 ">
+                                       <nav>
+                                          <div class="nav nav-tabs nav-fill col-md-8" id="nav-tab"
+                                             role="tablist">
+                                             <a class="nav-item nav-link active" id="nav-all-tab"
+                                                data-toggle="tab" href="#nav-all" role="tab"
+                                                aria-controls="nav-all" aria-selected="true">All <span
+                                                class="rank">5</span></a>
+                                             <a class="nav-item nav-link" id="nav-audit-tab"
+                                                data-toggle="tab" href="#nav-audit" role="tab"
+                                                aria-controls="nav-audit" aria-selected="false">With audits
+                                             <span class="rank">1</span></a>
+                                             <a class="nav-item nav-link" id="nav-action-tab"
+                                                data-toggle="tab" href="#nav-action" role="tab"
+                                                aria-controls="nav-action" aria-selected="false">Action
+                                             Required <span class="rank">4</span></a>
+                                          </div>
+                                       </nav>
+                                       <div class="tab-content property-tab-content" id="nav-tabContent">
+                                          <div class="tab-pane fade show active" id="nav-all" role="tabpanel"
+                                             aria-labelledby="nav-all-tab">
+                                             <ul class="property-content">
+                                                <li>
+                                                   <p><a href="#">Pearl Plaza</a></p>
+                                                   <div class="property-status">
+                                                      <small>No audit</small>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <p><a href="#">Property B</a></p>
+                                                   <div class="property-status">
+                                                      <small>No audit: <span
+                                                         class="list-no list-no-green">Complete</span></small>
+                                                      <div class="progress-bar">
+                                                         <label for="file"><small>Fix: <span
+                                                            class="list-no list-no-orange">In
+                                                         Progress</span></small></label>
+                                                         <progress id="file" value="80" max="100"> 80%
+                                                         </progress>
+                                                         <span class="progress-percentage">80%</span>
+                                                      </div>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <p><a href="#">Property Delta</a></p>
+                                                   <div class="property-status">
+                                                      <small>No audit</small>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <p><a href="#">Property Gamma</a></p>
+                                                   <div class="property-status">
+                                                      <small>No audit</small>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <p><a href="#">Property Sigma</a></p>
+                                                   <div class="property-status">
+                                                      <small>No audit</small>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                          <div class="tab-pane fade" id="nav-audit" role="tabpanel"
+                                             aria-labelledby="nav-audit-tab">
+                                             ...
+                                          </div>
+                                          <div class="tab-pane fade" id="nav-action" role="tabpanel"
+                                             aria-labelledby="nav-action-tab">
+                                             ...
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="tab-pane fade" id="Status" role="tabpanel" aria-labelledby="Status-tab">
+                           <div class="overview-content-top">
+                              <div class="overvew-content-left">
+                                 <h2 class="site-content-heading">Overview</h2>
+                                 <span class="proprty-icon">
+                                    <i class="fa fa-building-o" aria-hidden="true"></i>
+                                    <p>5 Properties</p>
+                                 </span>
+                              </div>
+                              <div class="overvew-content-right">
+                                 <div class="select-wrapper">
+                                    <label>Property:</label>
+                                    <select class="js-select2 check-select">
+                                       <option>All</option>
+                                       <option>Pearl Plaza</option>
+                                       <option>Property Delta</option>
+                                       <option>Property Gamma</option>
+                                       <option>Property Sigma</option>
+                                    </select>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="overview-table table-scrollbar" style="overflow-x: auto">
+                              <table class="table">
+                                 <thead>
+                                    <tr>
+                                       <th scope="col">Profile</th>
+                                       <th scope="col">Leak Status</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td rowspan="4" style="min-width: 250px;">
+                                          <div class="profile-list">
+                                             <ul>
+                                                <li>
+                                                   <span class="list-icon list-icon-purple">
+                                                   <img src="assets/images/units.png" />
+                                                   </span>
+                                                   <div class="list-desc">
+                                                      <span class="list-no list-no-purple">28</span>
+                                                      <small>Units</small>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span class="list-icon list-icon-green">
+                                                   <img src="assets/images/meters.png" />
+                                                   </span>
+                                                   <div class="list-desc">
+                                                      <span class="list-no list-no-green">16</span>
+                                                      <small>Water meters</small>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span class="list-icon list-icon-orange">
+                                                   <img src="assets/images/audits.png" />
+                                                   </span>
+                                                   <div class="list-desc">
+                                                      <span class="list-no list-no-orange">4</span>
+                                                      <small>Audits</small>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span class="list-icon list-icon-pink">
+                                                   <img src="assets/images/alerts.png" />
+                                                   </span>
+                                                   <div class="list-desc">
+                                                      <span class="list-no list-no-red">1</span>
+                                                      <small>Alerts</small>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                             <div class="view-profile-wrap">
+                                                <a href="#">View Company Profile <i
+                                                   class="fa fa-angle-right"
+                                                   aria-hidden="true"></i></a>
+                                             </div>
+                                          </div>
+                                       </td>
+                                       <td rowspan="4" class="leak-status-wrap">
+                                          <div class="leak-status-content">
+                                             <ul>
+                                                <li class="leak-status-bg pink-bg">
+                                                   <div class="leak-status-graph">
+                                                      <div id="graph1"></div>
+                                                   </div>
+                                                   <h2 class="leak-status-heading list-no list-no-pink">
+                                                      Emergency Leaks
+                                                   </h2>
+                                                   <div class="leak-status">
+                                                      <ul>
+                                                         <li>
+                                                            <p class="status-title">Total</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                         <li>
+                                                            <p class="status-title">Audit</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                         <li>
+                                                            <p class="status-title">Fix</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                      </ul>
+                                                   </div>
+                                                </li>
+                                                <li class="leak-status-bg red-bg">
+                                                   <div class="leak-status-graph">
+                                                      <div id="graph2"></div>
+                                                   </div>
+                                                   <h2 class="leak-status-heading list-no list-no-red">
+                                                      Major Leaks
+                                                   </h2>
+                                                   <div class="leak-status">
+                                                      <ul>
+                                                         <li>
+                                                            <p class="status-title">Total</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                         <li>
+                                                            <p class="status-title">Audit</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                         <li>
+                                                            <p class="status-title">Fix</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                      </ul>
+                                                   </div>
+                                                </li>
+                                                <li class="leak-status-bg orange-bg">
+                                                   <div class="leak-status-graph">
+                                                      <div id="graph3"></div>
+                                                   </div>
+                                                   <h2 class="leak-status-heading list-no list-no-orange">
+                                                      Minor Leaks
+                                                   </h2>
+                                                   <div class="leak-status">
+                                                      <ul>
+                                                         <li>
+                                                            <p class="status-title">Total</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                         <li>
+                                                            <p class="status-title">Audit</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                         <li>
+                                                            <p class="status-title">Fix</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                      </ul>
+                                                   </div>
+                                                </li>
+                                                <li class="leak-status-bg yellow-bg">
+                                                   <div class="leak-status-graph">
+                                                      <div id="graph4"></div>
+                                                   </div>
+                                                   <h2 class="leak-status-heading list-no list-no-yellow">
+                                                      Potential Leaks
+                                                   </h2>
+                                                   <div class="leak-status">
+                                                      <ul>
+                                                         <li>
+                                                            <p class="status-title">Total</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                         <li>
+                                                            <p class="status-title">Audit</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                         <li>
+                                                            <p class="status-title">Fix</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                      </ul>
+                                                   </div>
+                                                </li>
+                                                <li class="leak-status-bg green-bg">
+                                                   <div class="leak-status-graph">
+                                                      <div id="graph5"></div>
+                                                   </div>
+                                                   <h2 class="leak-status-heading list-no list-no-green">No
+                                                      Leak
+                                                   </h2>
+                                                   <div class="leak-status">
+                                                      <ul>
+                                                         <li>
+                                                            <p class="status-title">Total</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                         <li>
+                                                            <p class="status-title">Audit</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                         <li>
+                                                            <p class="status-title">Fix</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                      </ul>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                           
+                           <div class="overview-table overview-table-mob">
+                              <table class="table">
+                                 <thead>
+                                    <tr>
+                                       <th scope="col">Profile</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td rowspan="4">
+                                          <div class="profile-list">
+                                             <ul>
+                                                <li>
+                                                   <span class="list-icon list-icon-purple">
+                                                   <img src="assets/images/units.png" />
+                                                   </span>
+                                                   <div class="list-desc">
+                                                      <span class="list-no list-no-purple">28</span>
+                                                      <small>Units</small>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span class="list-icon list-icon-green">
+                                                   <img src="assets/images/meters.png" />
+                                                   </span>
+                                                   <div class="list-desc">
+                                                      <span class="list-no list-no-green">16</span>
+                                                      <small>Water meters</small>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span class="list-icon list-icon-orange">
+                                                   <img src="assets/images/audits.png" />
+                                                   </span>
+                                                   <div class="list-desc">
+                                                      <span class="list-no list-no-orange">4</span>
+                                                      <small>Audits</small>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span class="list-icon list-icon-pink">
+                                                   <img src="assets/images/alerts.png" />
+                                                   </span>
+                                                   <div class="list-desc">
+                                                      <span class="list-no list-no-red">1</span>
+                                                      <small>Alerts</small>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                             <div class="view-profile-wrap">
+                                                <a href="#">View Company Profile <i
+                                                   class="fa fa-angle-right"
+                                                   aria-hidden="true"></i></a>
+                                             </div>
+                                          </div>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                           <div class="overview-table overview-table-mob" style="overflow-x: auto">
+                              <table class="table">
+                                 <thead>
+                                    <tr>
+                                       <th scope="col">Leak Status</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td rowspan="4" class="leak-status-wrap">
+                                          <div class="leak-status-content">
+                                             <ul>
+                                                <li class="leak-status-bg pink-bg">
+                                                   <div class="leak-status-graph">
+                                                      <div id="graph1"></div>
+                                                   </div>
+                                                   <h2 class="leak-status-heading list-no list-no-pink">
+                                                      Emergency Leaks
+                                                   </h2>
+                                                   <div class="leak-status">
+                                                      <ul>
+                                                         <li>
+                                                            <p class="status-title">Total</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                         <li>
+                                                            <p class="status-title">Audit</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                         <li>
+                                                            <p class="status-title">Fix</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                      </ul>
+                                                   </div>
+                                                </li>
+                                                <li class="leak-status-bg red-bg">
+                                                   <div class="leak-status-graph">
+                                                      <div id="graph2"></div>
+                                                   </div>
+                                                   <h2 class="leak-status-heading list-no list-no-red">
+                                                      Major Leaks
+                                                   </h2>
+                                                   <div class="leak-status">
+                                                      <ul>
+                                                         <li>
+                                                            <p class="status-title">Total</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                         <li>
+                                                            <p class="status-title">Audit</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                         <li>
+                                                            <p class="status-title">Fix</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                      </ul>
+                                                   </div>
+                                                </li>
+                                                <li class="leak-status-bg orange-bg">
+                                                   <div class="leak-status-graph">
+                                                      <div id="graph3"></div>
+                                                   </div>
+                                                   <h2 class="leak-status-heading list-no list-no-orange">
+                                                      Minor Leaks
+                                                   </h2>
+                                                   <div class="leak-status">
+                                                      <ul>
+                                                         <li>
+                                                            <p class="status-title">Total</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                         <li>
+                                                            <p class="status-title">Audit</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                         <li>
+                                                            <p class="status-title">Fix</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                      </ul>
+                                                   </div>
+                                                </li>
+                                                <li class="leak-status-bg yellow-bg">
+                                                   <div class="leak-status-graph">
+                                                      <div id="graph4"></div>
+                                                   </div>
+                                                   <h2 class="leak-status-heading list-no list-no-yellow">
+                                                      Potential Leaks
+                                                   </h2>
+                                                   <div class="leak-status">
+                                                      <ul>
+                                                         <li>
+                                                            <p class="status-title">Total</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                         <li>
+                                                            <p class="status-title">Audit</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                         <li>
+                                                            <p class="status-title">Fix</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                      </ul>
+                                                   </div>
+                                                </li>
+                                                <li class="leak-status-bg green-bg">
+                                                   <div class="leak-status-graph">
+                                                      <div id="graph5"></div>
+                                                   </div>
+                                                   <h2 class="leak-status-heading list-no list-no-green">No
+                                                      Leak
+                                                   </h2>
+                                                   <div class="leak-status">
+                                                      <ul>
+                                                         <li>
+                                                            <p class="status-title">Total</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                         <li>
+                                                            <p class="status-title">Audit</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                         <li>
+                                                            <p class="status-title">Fix</p>
+                                                            <p class="status-unit">0</p>
+                                                         </li>
+                                                      </ul>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                           
+                           <div class="meter-status-wrap">
+                            <div class="content-top">
+                                <div class="content-left">
+                                    <h2 class="site-content-heading">Water meters</h2>
+                                </div>
+                                <div class="content-right">
+                                    <div class="search-container">
+                                        <input type="text" placeholder="search..." name="search">
+                                        <button type="submit">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16">
+                                            <style>
+                                                tspan { white-space:pre }
+                                                .shp0 { fill: #95a8b8 } 
+                                            </style>
+                                            <g id="Layer">
+                                                <g id="Layer">
+                                                    <path id="Layer" fill-rule="evenodd" class="shp0" d="M505.75 505.75C501.59 509.91 496.13 512 490.67 512C485.2 512 479.74 509.91 475.58 505.75L329.98 360.15C295.15 388.35 250.88 405.34 202.67 405.34C90.92 405.34 0 314.41 0 202.67C0 90.92 90.92 0 202.67 0C314.41 0 405.33 90.93 405.33 202.67C405.33 250.88 388.35 295.15 360.15 329.99L505.75 475.59C514.09 483.93 514.09 497.41 505.75 505.75ZM362.67 202.67C362.67 114.43 290.9 42.67 202.67 42.67C114.43 42.67 42.67 114.43 42.67 202.67C42.67 290.9 114.43 362.67 202.67 362.67C290.9 362.67 362.67 290.9 362.67 202.67Z"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                        <div class="property-name-wrap">
+                                            <a href="#" class="property-name">Pearl Plaza</a>
+                                            <span class="divider"></span>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                        <div class="meter-status-detail-wrap" id="meter-detail-left" style="display: none">
+                                            <div class="site-content graph-bg">
+                                                <div class="site-content-top">
+                                                <h2 class="site-content-heading">
+                                                    AC Flowie 1
+                                                </h2>
+                                                <div id="water-tabs">
+                                                    <nav>
+                                                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                                        <a class="nav-item nav-link active" id="Daily-tab" data-toggle="tab" href="#Daily" role="tab" aria-controls="Daily" aria-selected="true">Daily</a>
+                                                        <a class="nav-item nav-link" id="Weekly-tab" data-toggle="tab" href="#Weekly" role="tab" aria-controls="Weekly" aria-selected="false">Weekly</a>
+                                                    </div>
+                                                    </nav>
+                                                    <div class="close-btn-wrap">
+                                                    <button class="close-btn" onclick="closeData()"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                                <div class="site-content-bottom">
+                                                <div class="tab-content" id="water-tabContent">
+                                                    <div class="tab-pane fade active show" id="Daily" role="tabpanel" aria-labelledby="Daily-tab">
+                                
+                                                    <div class="graph-wrap">
+                                                        <div class="graph-content">
+                                                            <div id="columnchart_values"></div>
+                                                            <div class="graph-content-lr">
+                                                                <h2>Total Usage: <strong>3566 Gal</strong></h2>
+                                                                <h2>Average Usage: <strong>509 Gal/Hour</strong></h2>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="Weekly" role="tabpanel" aria-labelledby="Weekly-tab">
+                                                    <div class="graph-wrap">
+                                                        <div class="graph-content-empty">
+                                                        <h2>No Data Available</h2>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6 col-xl-4">
+                                        <div class="meter-status-card wrapper-bg">
+                                            <div class="card-status-top">
+                                                <h2 class="leak-status-heading list-no list-no-orange">
+                                                    <i class="fa fa-info-circle" aria-hidden="true"></i> Leak Detected!
+                                                </h2>
+                                                <small class="total-units">2 units</small>
+                                            </div>
+                                            <div class="meter-detail-content">
+                                                <div class="media">
+                                                    <div class="meter-image">
+                                                    <img src="assets/images/modal-image.png" alt="img" />
+                                                    </div>
+                                                    <div class="media-body">
+                                                    <h2 class="meter-title">AC Flowie 1</h2>
+                                                    <p class="meter-reading">Last Reading on: 07/29/20 <span class="time">01:54 AM</span></p>
+                                                    <div class="meter-reading-overage-wrap">
+                                                        <div class="reading-content">
+                                                            <span class="list-no list-no-black">1677</span>
+                                                            <h2 class="reading-title">Meter Reading</h2>
+                                                        </div>
+                                                        <div class="reading-content">
+                                                            <span class="list-no list-no-red">320%</span>
+                                                            <h2 class="reading-title">Overage %</h2>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="view-data-wrap">
+                                                        <button class="button btn-white" onclick="viewData()">View Sentinel Data</button>
+                                                    </div> -->
+                                                    </div>
+                                                </div>
+                                                <div class="meter-button-wrap mt-4">
+                                                    <div class="meter-button-left">
+                                                      <button class="button btn-white"><i class="fa fa-tachometer" aria-hidden="true"></i> Meter Readings</button>
+                                                      <button class="button btn-blue">Log Meter Reading</button>
+                                                    </div>
+                                                    <div class="meter-button-right">
+                                                      <a href="#" class="button leak-btn">Continue Leak Audit</a>
+                                                      <a href="#" class="button leak-btn">Continue Fix Audit</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-6 col-xl-4">
+                                        <div class="meter-status-card wrapper-bg">
+                                            <div class="card-status-top">
+                                                <h2 class="leak-status-heading list-no list-no-green">
+                                                    <i class="fa fa-check" aria-hidden="true"></i> No Leak
+                                                </h2>
+                                                <small class="total-units">5 units</small>
+                                            </div>
+                                            <div class="meter-detail-content">
+                                                <div class="media">
+                                                    <div class="meter-image">
+                                                    <img src="assets/images/cross-image.png" />
+                                                    </div>
+                                                    <div class="media-body">
+                                                    <h2 class="meter-title">AC Flowie 2</h2>
+                                                    <p class="meter-reading">Last Reading on: 07/29/20 <span class="time">01:54 AM</span></p>
+                                                    <div class="meter-reading-overage-wrap">
+                                                        <div class="reading-content">
+                                                            <span class="list-no list-no-black">1677</span>
+                                                            <h2 class="reading-title">Meter Reading</h2>
+                                                        </div>
+                                                        <div class="reading-content">
+                                                            <span class="list-no list-no-black">0%</span>
+                                                            <h2 class="reading-title">Overage %</h2>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="view-data-wrap">
+                                                        <button class="button btn-white">View Sentinel Data</button>
+                                                    </div> -->
+                                                    </div>
+                                                </div>
+                                                <div class="meter-button-wrap mt-4">
+                                                   <div class="meter-button-left">
+                                                     <button class="button btn-white"><i class="fa fa-tachometer" aria-hidden="true"></i> Meter Readings</button>
+                                                     <button class="button btn-blue">Log Meter Reading</button>
+                                                   </div>
+                                                   <div class="meter-button-right">
+                                                     <a href="#" class="button leak-btn">Continue Leak Audit</a>
+                                                     <a href="#" class="button leak-btn">Continue Fix Audit</a>
+                                                   </div>
+                                               </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-6 col-xl-4">
+                                        <div class="meter-status-card wrapper-bg">
+                                            <div class="card-status-top">
+                                                <h2 class="leak-status-heading list-no list-no-green">
+                                                    <i class="fa fa-check" aria-hidden="true"></i> No Leak
+                                                </h2>
+                                                <small class="total-units">3 units</small>
+                                            </div>
+                                            <div class="meter-detail-content">
+                                                <div class="media">
+                                                    <div class="meter-image">
+                                                    <img src="assets/images/cross-image.png" />
+                                                    </div>
+                                                    <div class="media-body">
+                                                    <h2 class="meter-title">AC Flowie 3</h2>
+                                                    <p class="meter-reading">Last Reading on: N/A</p>
+                                                    <div class="meter-reading-overage-wrap">
+                                                        <div class="reading-content">
+                                                            <span class="list-no list-no-black">N/A</span>
+                                                            <h2 class="reading-title">Meter Reading</h2>
+                                                        </div>
+                                                        <div class="reading-content">
+                                                            <span class="list-no list-no-black">0%</span>
+                                                            <h2 class="reading-title">Overage %</h2>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="view-data-wrap">
+                                                        <button class="button btn-white">View Sentinel Data</button>
+                                                    </div> -->
+                                                    </div>
+                                                </div>
+                                                <div class="meter-button-wrap mt-4">
+                                                   <div class="meter-button-left">
+                                                     <button class="button btn-white"><i class="fa fa-tachometer" aria-hidden="true"></i> Meter Readings</button>
+                                                     <button class="button btn-blue">Log Meter Reading</button>
+                                                   </div>
+                                                   <!-- <div class="meter-button-right">
+                                                     <a href="#" class="button leak-btn">Continue Leak Audit</a>
+                                                     <a href="#" class="button leak-btn">Continue Fix Audit</a>
+                                                   </div> -->
+                                               </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                        <div class="property-name-wrap">
+                                            <a href="#" class="property-name">Property B</a>
+                                            <span class="divider"></span>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-6 col-xl-4">
+                                        <div class="meter-status-card wrapper-bg">
+                                            <div class="card-status-top">
+                                                <h2 class="leak-status-heading list-no list-no-green">
+                                                    <i class="fa fa-check" aria-hidden="true"></i> No Leak
+                                                </h2>
+                                                <small class="total-units">3 units</small>
+                                            </div>
+                                            <div class="meter-detail-content">
+                                                <div class="media">
+                                                    <div class="meter-image">
+                                                    <img src="assets/images/cross-image.png" />
+                                                    </div>
+                                                    <div class="media-body">
+                                                    <h2 class="meter-title">AC Flowie 4</h2>
+                                                    <p class="meter-reading">Last Reading on: 07/29/20 <span class="time">01:54 AM</span></p>
+                                                    <div class="meter-reading-overage-wrap">
+                                                        <div class="reading-content">
+                                                            <span class="list-no list-no-black">1677</span>
+                                                            <h2 class="reading-title">Meter Reading</h2>
+                                                        </div>
+                                                        <div class="reading-content">
+                                                            <span class="list-no list-no-black">0%</span>
+                                                            <h2 class="reading-title">Overage %</h2>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                                <div class="meter-button-wrap mt-4">
+                                                   <!-- <div class="meter-button-left">
+                                                     <button class="button btn-white"><i class="fa fa-tachometer" aria-hidden="true"></i> Meter Readings</button>
+                                                     <button class="button btn-blue">Log Meter Reading</button>
+                                                   </div> -->
+                                                   <div class="meter-button-right">
+                                                     <a href="#" class="button leak-btn">Continue Leak Audit</a>
+                                                     <a href="#" class="button leak-btn">Continue Fix Audit</a>
+                                                   </div>
+                                               </div>
+                                               <div class="graph-content">
+                                                <div id="linechart"></div>  
+                                               </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                        <div class="property-name-wrap">
+                                            <a href="#" class="property-name">Property Delta</a>
+                                            <span class="divider"></span>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-6 col-xl-4">
+                                        <div class="meter-status-card wrapper-bg">
+                                            <div class="card-status-top">
+                                                <h2 class="leak-status-heading list-no list-no-green">
+                                                    <i class="fa fa-check" aria-hidden="true"></i> No Leak
+                                                </h2>
+                                                <small class="total-units">3 units</small>
+                                            </div>
+                                            <div class="meter-detail-content">
+                                                <div class="media">
+                                                    <div class="meter-image">
+                                                    <img src="assets/images/cross-image.png" />
+                                                    </div>
+                                                    <div class="media-body">
+                                                    <h2 class="meter-title">AC Flowie 5</h2>
+                                                    <p class="meter-reading">Last Reading on: 07/29/20 <span class="time">01:54 AM</span></p>
+                                                    <div class="meter-reading-overage-wrap">
+                                                        <div class="reading-content">
+                                                            <span class="list-no list-no-black">1677</span>
+                                                            <h2 class="reading-title">Meter Reading</h2>
+                                                        </div>
+                                                        <div class="reading-content">
+                                                            <span class="list-no list-no-black">0%</span>
+                                                            <h2 class="reading-title">Overage %</h2>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="view-data-wrap">
+                                                        <button class="button btn-white">View Sentinel Data</button>
+                                                    </div> -->
+                                                    </div>
+                                                </div>
+                                                <div class="meter-button-wrap mt-4">
+                                                   <div class="meter-button-left">
+                                                     <button class="button btn-white"><i class="fa fa-tachometer" aria-hidden="true"></i> Meter Readings</button>
+                                                     <button class="button btn-blue">Log Meter Reading</button>
+                                                   </div>
+                                                   <div class="meter-button-right">
+                                                     <a href="#" class="button leak-btn">Continue Leak Audit</a>
+                                                     <a href="#" class="button leak-btn">Continue Fix Audit</a>
+                                                   </div>
+                                               </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-6 col-xl-4">
+                                        <div class="meter-status-card wrapper-bg">
+                                            <div class="card-status-top">
+                                                <h2 class="leak-status-heading list-no list-no-green">
+                                                    <i class="fa fa-check" aria-hidden="true"></i> No Leak
+                                                </h2>
+                                                <small class="total-units">3 units</small>
+                                            </div>
+                                            <div class="meter-detail-content">
+                                                <div class="media">
+                                                    <div class="meter-image">
+                                                    <img src="assets/images/cross-image.png" />
+                                                    </div>
+                                                    <div class="media-body">
+                                                    <h2 class="meter-title">AC Flowie 6</h2>
+                                                    <p class="meter-reading">Last Reading on: 07/29/20 <span class="time">01:54 AM</span></p>
+                                                    <div class="meter-reading-overage-wrap">
+                                                        <div class="reading-content">
+                                                            <span class="list-no list-no-black">1677</span>
+                                                            <h2 class="reading-title">Meter Reading</h2>
+                                                        </div>
+                                                        <div class="reading-content">
+                                                            <span class="list-no list-no-black">0%</span>
+                                                            <h2 class="reading-title">Overage %</h2>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="view-data-wrap">
+                                                        <button class="button btn-white">View Sentinel Data</button>
+                                                    </div> -->
+                                                    </div>
+                                                </div>
+                                                <div class="meter-button-wrap mt-4">
+                                                   <div class="meter-button-left">
+                                                     <button class="button btn-white"><i class="fa fa-tachometer" aria-hidden="true"></i> Meter Readings</button>
+                                                     <button class="button btn-blue">Log Meter Reading</button>
+                                                   </div>
+                                                   <div class="meter-button-right">
+                                                     <a href="#" class="button leak-btn">Continue Leak Audit</a>
+                                                     <a href="#" class="button leak-btn">Continue Fix Audit</a>
+                                                   </div>
+                                               </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                        <div class="property-name-wrap">
+                                            <a href="#" class="property-name">Property Gamma</a>
+                                            <span class="divider"></span>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                        <div class="no-record-wrap">
+                                            <h2 class="no-record-heading">No water meter</h2>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                        <div class="property-name-wrap">
+                                            <a href="#" class="property-name">Property Sigma</a>
+                                            <span class="divider"></span>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                        <div class="no-record-wrap">
+                                            <h2 class="no-record-heading">No water meter</h2>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                           </div>
+
+                           
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- /#page-content-wrapper -->
+      </div>
+      <!-- /#wrapper -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.8.6/apexcharts.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+      <script type="text/javascript" src="assets/js/custom.js"></script>
+      <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+      <script>
+         var options = {
+             chart: {
+                 type: "donut",
+                 // zorgt dat de donut groter wordt en de legenda weg is.
+                 sparkline: {
+                     enabled: true
+                 }
+             },
+             // deze staan vast
+             series: [60, 40],
+             colors: ["#ff8c8c", "#f2e5e5"],
+         
+             // zorgt voor standaard tooltip en correct weergave van de waarde
+             tooltip: {
+                 enabled: false,
+             },
+         
+             // zorgt ervoor dat de hovercolor gelijk is aan de standaard kleur
+             states: {
+                 hover: {
+                     filter: {
+                         type: "none"
+                     }
+                 }
+             },
+             plotOptions: {
+                 pie: {
+                     // mag aan of uit (animatie)
+                     expandOnClick: false,
+                 }
+             }
+         };
+         
+         var chart = new ApexCharts(document.querySelector("#chart1"), options);
+         chart.render();
+      </script>
+      <script>
+         var options = {
+             chart: {
+                 type: "donut",
+                 // zorgt dat de donut groter wordt en de legenda weg is.
+                 sparkline: {
+                     enabled: true
+                 }
+             },
+             // deze staan vast
+             series: [100],
+             colors: ["#f2e5e5"],
+         
+             // zorgt voor standaard tooltip en correct weergave van de waarde
+             tooltip: {
+                 enabled: false,
+             },
+         
+             // zorgt ervoor dat de hovercolor gelijk is aan de standaard kleur
+             states: {
+                 hover: {
+                     filter: {
+                         type: "none"
+                     }
+                 }
+             },
+         
+             plotOptions: {
+                 pie: {
+                     // mag aan of uit (animatie)
+                     expandOnClick: false,
+                 }
+             }
+         };
+         
+         var chart = new ApexCharts(document.querySelector("#chart2"), options);
+         chart.render();
+      </script>
+      <script>
+         var options = {
+             chart: {
+                 type: "donut",
+                 // zorgt dat de donut groter wordt en de legenda weg is.
+                 sparkline: {
+                     enabled: true
+                 }
+             },
+             // deze staan vast
+             series: [100],
+             colors: ["#f2e5e5"],
+         
+             // zorgt voor standaard tooltip en correct weergave van de waarde
+             tooltip: {
+                 enabled: false,
+                 fillSeriesColor: false,
+             },
+         
+             // zorgt ervoor dat de hovercolor gelijk is aan de standaard kleur
+             states: {
+                 hover: {
+                     filter: {
+                         type: "none"
+                     }
+                 }
+             },
+             plotOptions: {
+                 pie: {
+                     // mag aan of uit (animatie)
+                     expandOnClick: false,
+                 }
+             }
+         };
+         
+         var chart = new ApexCharts(document.querySelector("#chart3"), options);
+         chart.render();
+      </script>
+      <script>
+         var options = {
+             chart: {
+                 type: "donut",
+                 // zorgt dat de donut groter wordt en de legenda weg is.
+                 sparkline: {
+                     enabled: true
+                 }
+             },
+             // deze staan vast
+             series: [10, 90],
+             colors: ["#f8ae18", "#f2e5e5"],
+         
+             // zorgt voor standaard tooltip en correct weergave van de waarde
+             tooltip: {
+                 enabled: false,
+                 fillSeriesColor: false,
+             },
+         
+             // zorgt ervoor dat de hovercolor gelijk is aan de standaard kleur
+             states: {
+                 hover: {
+                     filter: {
+                         type: "none"
+                     }
+                 }
+             },
+             plotOptions: {
+                 pie: {
+                     // mag aan of uit (animatie)
+                     expandOnClick: false,
+                 }
+             }
+         };
+         
+         var chart = new ApexCharts(document.querySelector("#chart4"), options);
+         chart.render();
+      </script>
+      <script>
+         var options = {
+             chart: {
+                 type: "donut",
+                 // zorgt dat de donut groter wordt en de legenda weg is.
+                 sparkline: {
+                     enabled: true
+                 }
+             },
+             // deze staan vast
+             series: [20, 80],
+             colors: ["#6bd363", "#e3f4de"],
+         
+             // zorgt voor standaard tooltip en correct weergave van de waarde
+             tooltip: {
+                 enabled: false,
+                 fillSeriesColor: false,
+             },
+         
+             // zorgt ervoor dat de hovercolor gelijk is aan de standaard kleur
+             states: {
+                 hover: {
+                     filter: {
+                         type: "none"
+                     }
+                 }
+             },
+             plotOptions: {
+                 pie: {
+                     // mag aan of uit (animatie)
+                     expandOnClick: false,
+                 }
+             }
+         };
+         
+         var chart = new ApexCharts(document.querySelector("#chart5"), options);
+         chart.render();
+      </script>
+      <script>
+         var options = {
+             chart: {
+                 type: "donut",
+                 // zorgt dat de donut groter wordt en de legenda weg is.
+                 sparkline: {
+                     enabled: true
+                 }
+             },
+             // deze staan vast
+             series: [40, 60],
+             colors: ["#6bd363", "#e3f4de"],
+         
+             // zorgt voor standaard tooltip en correct weergave van de waarde
+             tooltip: {
+                 enabled: false,
+                 fillSeriesColor: false,
+             },
+         
+             // zorgt ervoor dat de hovercolor gelijk is aan de standaard kleur
+             states: {
+                 hover: {
+                     filter: {
+                         type: "none"
+                     }
+                 }
+             },
+             plotOptions: {
+                 pie: {
+                     // mag aan of uit (animatie)
+                     expandOnClick: false,
+                 }
+             }
+         };
+         
+         var chart = new ApexCharts(document.querySelector("#chart6"), options);
+         chart.render();
+      </script>
+      <script>
+         var options = {
+             series: [30],
+             colors: ["#c22198"],
+             chart: {
+                 height: 220,
+                 type: "radialBar",
+                 offsetY: -10
+             },
+             plotOptions: {
+                 radialBar: {
+                     dataLabels: {
+                         value: {
+                             color: "#454545",
+                             offsetY: -10,
+                             fontSize: "22px"
+                         }
+                     }
+                 }
+             },
+             labels: ["."]
+         };
+         
+         var chart = new ApexCharts(document.querySelector("#graph1"), options);
+         chart.render();
+      </script>
+      <script>
+         var options = {
+             series: [10],
+             colors: ["#d23c3c"],
+             chart: {
+                 height: 220,
+                 type: "radialBar",
+                 offsetY: -10
+             },
+             plotOptions: {
+                 radialBar: {
+                     dataLabels: {
+                         value: {
+                             color: "#454545",
+                             offsetY: -10,
+                             fontSize: "22px"
+                         }
+                     }
+                 }
+             },
+             labels: ["."]
+         };
+         
+         var chart = new ApexCharts(document.querySelector("#graph2"), options);
+         chart.render();
+      </script>
+      <script>
+         var options = {
+             series: [10],
+             colors: ["#fa9518"],
+             chart: {
+                 height: 220,
+                 type: "radialBar",
+                 offsetY: -10
+             },
+             plotOptions: {
+                 radialBar: {
+                     dataLabels: {
+                         value: {
+                             color: "#454545",
+                             offsetY: -10,
+                             fontSize: "22px"
+                         }
+                     }
+                 }
+             },
+             labels: ["."]
+         };
+         
+         var chart = new ApexCharts(document.querySelector("#graph3"), options);
+         chart.render();
+      </script>
+      <script>
+         var options = {
+             series: [10],
+             colors: ["#c6d632"],
+             chart: {
+                 height: 220,
+                 type: "radialBar",
+                 offsetY: -10
+             },
+             plotOptions: {
+                 radialBar: {
+                     dataLabels: {
+                         value: {
+                             color: "#454545",
+                             offsetY: -10,
+                             fontSize: "22px"
+                         }
+                     }
+                 }
+             },
+             labels: ["."]
+         };
+         
+         var chart = new ApexCharts(document.querySelector("#graph4"), options);
+         chart.render();
+      </script>
+      <script>
+         var options = {
+             series: [40],
+             colors: ["#72db72"],
+             chart: {
+                 height: 220,
+                 type: "radialBar",
+                 offsetY: -10
+             },
+             plotOptions: {
+                 radialBar: {
+                     dataLabels: {
+                         value: {
+                             color: "#454545",
+                             offsetY: -10,
+                             fontSize: "22px"
+                         }
+                     }
+                 }
+             },
+             labels: ["."]
+         };
+         
+         var chart = new ApexCharts(document.querySelector("#graph5"), options);
+         chart.render();
+      </script>
+  
+      <script type="text/javascript">
+        google.charts.load("current", {packages:['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ["Element", "Density", { role: "style" } ],
+            ["12:00 AM", 900, "color: #55a5fe"],
+            ["01:00 AM", 800, "color: #55a5fe"],
+            ["02:00 AM", 300, "color: #55a5fe"],
+            ["03:00 AM", 700, "color: #55a5fe"],
+            ["04:00 AM", 400, "color: #55a5fe"]
+        ]);
+    
+        var view = new google.visualization.DataView(data);
+        var options = {
+            height: 150,
+            bar: {groupWidth: "15%"},
+            legend: { position: "none" },
+        };
+        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+        chart.draw(view, options);
+        }
+      </script>
+      <!-- Linechart Js -->
+      <script type="text/javascript">
+         var options = {
+         series: [{
+         data: [900, 800, 300, 700, 400]
+         }],
+         chart: {
+         type: 'bar',
+         height: 150,
+         },
+         plotOptions: {
+         bar: {
+            horizontal: false,
+            columnWidth: '12%',
+            endingShape: "rounded"
+         },
+         },
+         dataLabels: {
+         enabled: false
+         },
+         colors: ['#55a5fe'],
+         stroke: {
+         show: true,
+         curve: 'smooth',
+         width: 2,
+         colors: ['transparent']
+         },
+         fill: {
+         type: 'gradient',
+         gradient: {
+            shade: 'light',
+            gradientToColors: ["#6ce4ff"],
+            type: 'vertical',
+            stops: [0, 50, 100]
+         },
+         },
+         xaxis: {
+         categories: ['12:00 AM', '1:00 AM', '2:00 AM', '3:00 AM', '4:00 AM'],
+         },
+         tooltip: {
+         y: {
+            formatter: function (val) {
+               return "$ " + val + " thousands"
+            }
+         }
+         }
+         };
+
+         var chart = new ApexCharts(document.querySelector("#linechart"), options);
+         chart.render();
+      </script>
+
+      <script>
+         $("#show-manager-detail-left").click(function(){
+            $("#detail-wrap-left").css("display", "block");
+            $("#show-manager-detail-left").addClass('active');
+         });
+         $(".close-btn").click(function () {
+            $("#detail-wrap-left").css("display", "none");
+            $("#show-manager-detail-left").removeClass('active');
+         });
+      </script>  
+      <script>
+         function viewData() {
+           document.getElementById("meter-detail-left").style.display = "block";
+         }
+         function closeData() {
+           document.getElementById("meter-detail-left").style.display = "none";
+         }
+      </script>    
+</body>
+</html>

@@ -10,7 +10,7 @@
 }
 
 .common-dropdown .dropdown-menu {
-    padding: 0;
+    padding: 6px;
     border-radius: 5px;
     filter: drop-shadow(0px 2px 3px rgba(48,49,51,0.2));
     background-color: #ffffff;
@@ -19,7 +19,13 @@
 .common-dropdown .dropdown-item {
     font-weight: 400;
     font-size: 14px;
-    padding: 10px 15px;
+    padding: 6px 10px;
+    border-radius: 3px;
+}
+.common-dropdown .dropdown-item:active, 
+.common-dropdown .dropdown-item:hover{
+    color: #212529;
+    background-color: #eeeff0;
 }
 
 
@@ -95,7 +101,10 @@
     align-items: center;
     justify-content: center;
 }
-
+.close-btn a {
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+}
 .progressbar-wrap {
     background-color: #798899;
     padding: 10px;
@@ -246,6 +255,7 @@
     margin-left: 10px;
     font-size: 15px;
     padding: 0;
+    color: #454545;
 }
 
 .accordion-btn:hover, .accordion-btn:focus {
@@ -480,8 +490,9 @@
     top: 0;
     bottom: 0;
     max-width: 100%;
-    max-height: 100%;
+    height: 100%;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 .img-name {
@@ -489,12 +500,12 @@
     line-height: 24px;
     color: #454545;
     font-weight: 400;
-    margin: 0;
+    margin: 0 4px;
     padding: 0 10px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 120px;
+    width: 125px;
 }
 
 .img-content-left {
@@ -532,7 +543,6 @@
     font-weight: 700;
     color: #3673ac;
 }
-
 
 .card-main-content ul {
     margin: 0;
@@ -618,7 +628,6 @@
     font-weight: 400;
 }
 
-
 .audit-detail ul {
     margin: 0;
     padding: 10px 0;
@@ -647,8 +656,6 @@
     margin: 0;
     min-width: 100px;
 }
-
-
 
 @media (min-width: 767px){
     #view-more-modal .modal-dialog {
@@ -694,19 +701,19 @@
         clear: both;
         overflow: hidden;
         margin-bottom: 20px;
-      }
-      .tab-graph-content ul:last-child {
+    }
+    /* .tab-graph-content ul:last-child {
         margin-bottom: 0px;
-      }
-      #graph1, #graph2, #graph3, #graph4, #graph5, #graph6 {
-          min-height: 120px !important;
-      }
-      .tab-graph-wrap .apexcharts-canvas {
+    } */
+    #graph1, #graph2, #graph3, #graph4, #graph5, #graph6 {
+        min-height: 120px !important;
+    }
+    .tab-graph-wrap .apexcharts-canvas {
         height: 120px !important;
-      }
-      .tab-graph-wrap svg {
+    }
+    .tab-graph-wrap svg {
         height: 120px !important;
-      }
+    }
 }
 
 @media(max-width: 575px){

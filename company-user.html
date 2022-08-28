@@ -25,30 +25,37 @@
         <div class="site-header">
           <nav class="navbar navbar-expand-lg">
             <div class="navbar-content-left">
-              <button class="navbar-toggler" type="button" id="menu-toggle"  data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </span>
-              </button>
-              <h2 class="heading-left">Company User</h2>
+              <div class="navbar--view-lt">
+                <button class="navbar-toggler" type="button" id="menu-toggle"  data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </span>
+                </button>
+                <h2 class="heading-left">Company User</h2>
+              </div>
             </div>
               <div class="navbar-content-right"> 
-                <ul class="navbar-nav ml-auto mt-lg-0">
+                <ul class="navbar-nav ml-auto mt-lg-0 user-nav-dropdown">
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-user" aria-hidden="true"></i> Lindsay Harrington 
-                      <span class="down-arrow">
-                          <i class="fa fa-angle-down" aria-hidden="true"></i>
-                      </span>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                      <a class="dropdown-item" href="#">Settings</a>
-                      <a class="dropdown-item" href="#">Logout</a>
-                    </div>
-                  </li>
-                </ul>
+                     <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">
+                       <i class="fa fa-user" aria-hidden="true"></i> Lindsay Harrington
+                       <span class="down-arrow">
+                         <i class="fa fa-angle-down" aria-hidden="true"></i>
+                       </span>
+                     </a>
+                     <div class="dropdown-menu dropdown-menu-right">
+                       <a class="dropdown-item" href="#">
+                        <strong>Lindsay Harrington</strong>
+                        <small>Super Admin</small>
+                       </a>
+                       <a class="dropdown-item" href="#">My Profile</a>
+                       <a class="dropdown-item red-link" href="#">Logout</a>
+                     </div>
+                   </li>
+               </ul>
               </div>
             </nav>
         </div>
@@ -60,13 +67,24 @@
           </div>
           <ul class="list-group">
             <li>
-                <a href="index.html" class="list-group-item">
-                    <span class="sidebar-list-icon home-icon" style="background-image: url(assets/images/home-gray.png);"></span> Dashboard
-                </a>
-            </li>
+              <div class="dropdown theme-dropdown">
+                 <a class="list-group-item theme-dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                 <span class="sidebar-list-icon home-icon"
+                    style="background-image: url(assets/images/home-gray.png);"></span> Dashboard
+                 <span class="down-arrow">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                 </span>
+                 </a>
+                 <div class="dropdown-menu theme-dropdown-menu">
+                    <a class="dropdown-item" href="global-leak-efficiency-audit.html">Global Leak/Efficiency Audit</a>
+                    <a class="dropdown-item" href="global-leak-status.html">Global Leak Status</a>
+                 </div>
+              </div>
+           </li>
             <li>
                 <div class="dropdown profile-dropdown show">
-                    <a class="list-group-item active dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <a class="list-group-item active profile-dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         <span class="sidebar-list-icon company-icon" style="background-image: url(assets/images/company-gray.png);"></span> Company Profile 
                         <span class="down-arrow">
                             <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -111,13 +129,9 @@
         </div>
         <!-- #sidebar-wrapper -->
       </div>
-
-        
     
         <!-- Page Content -->
         <div id="page-content-wrapper">
-          
-          
           <div class="user-wrapper">
             <div class="row">
               <div class="col-md-12">
@@ -147,7 +161,8 @@
                         <td>
                           <div class="media">
                             <div class="user-img">
-                                <img class="mr-3" src="" />
+                                <!-- <img class="mr-3" src="" /> -->
+                                <span class="image-text">RA</span>
                             </div>
                             <div class="media-body">
                               <h5>Raunak Agarwal</h5>
@@ -187,13 +202,13 @@
                             </div>
                           </div>
                         </td>
-                        
                       </tr>
                       <tr>  
                         <td>
                           <div class="media">
                             <div class="user-img">
-                                <img class="mr-3" src="" />
+                                <!-- <img class="mr-3" src="" /> -->
+                                <span class="image-text">OS</span>
                             </div>
                             <div class="media-body">
                               <h5>Oreo Smith</h5>
@@ -232,15 +247,14 @@
                               </div>
                             </div>
                           </div>
-                        </td>
-                        
+                        </td>                       
                       </tr>
                       <tr>
-                        
                         <td>
                           <div class="media">
                             <div class="user-img">
-                                <img class="mr-3" src="" />
+                                <!-- <img class="mr-3" src="" /> -->
+                                <span class="image-text">JW</span>
                             </div>
                             <div class="media-body">
                               <h5>James William</h5>
@@ -280,14 +294,13 @@
                             </div>
                           </div>
                         </td>
-                        
                       </tr>
                       <tr>
-                        
                         <td>
                            <div class="media">
                             <div class="user-img">
-                                <img class="mr-3" src="" />
+                                <!-- <img class="mr-3" src="" /> -->
+                                <span class="image-text">JD</span>
                             </div>
                             <div class="media-body">
                               <h5>Justin Duston</h5>
@@ -327,14 +340,13 @@
                             </div>
                           </div>
                         </td>
-                        
                       </tr>
                       <tr>
-                        
                         <td>
                            <div class="media">
                             <div class="user-img">
-                                <img class="mr-3" src="" />
+                                <!-- <img class="mr-3" src="" /> -->
+                                <span class="image-text">CR</span>
                             </div>
                             <div class="media-body">
                               <h5>Carla Reynolds</h5>
@@ -374,14 +386,13 @@
                             </div>
                           </div>
                         </td>
-                        
                       </tr>
                       <tr>
-                        
                         <td>
                            <div class="media">
                             <div class="user-img">
-                                <img class="mr-3" src="" />
+                                <!-- <img class="mr-3" src="" /> -->
+                                <span class="image-text">TH</span>
                             </div>
                             <div class="media-body">
                               <h5>Tim Harrison</h5>

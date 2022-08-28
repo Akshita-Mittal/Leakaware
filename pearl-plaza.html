@@ -29,8 +29,8 @@
       <!-- top-header-start-->
       <div class="site-header">
         <nav class="navbar navbar-expand-lg">
-
           <div class="navbar-content-left">
+            <div class="navbar--view-lt">
             <button class="navbar-toggler" type="button" id="menu-toggle" data-toggle="collapse"
               data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
               aria-label="Toggle navigation">
@@ -40,18 +40,51 @@
                 <div></div>
               </span>
             </button>
-            <h2 class="heading-left"><img src="assets/images/profile.png" alt="img" /> Pearl Plaza</h2>
+            <h2 class="heading-left">
+              <img src="assets/images/profile.png" alt="img" /> 
+              Pearl Plaza
+            </h2>
+            </div>
+            <!-- <div class="navbar--view-rt">
+              <div class="btn-wrap ml-2">
+                <button class="button button-lg btn-blue" data-toggle="modal" data-target="#log-meter-modal">Log meter
+                  reading</button>
+              </div>
+            </div>  -->
           </div>
 
-
           <div class="navbar-content-right">
-            <ul class="navbar-nav ml-auto mt-lg-0">
-              <li class="nav-item">
+            <ul class="navbar-nav ml-auto mt-lg-0 ellipse-dropdown-navbar">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+                  <div class="ellipse-wrap">
+                    <img src="assets/images/ellipsis-ver.png" alt="img" />
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18" width="12" height="18">
+                      <defs>
+                        <image  width="12" height="18" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAAEsCAMAAACFcQ/VAAAAAXNSR0IB2cksfwAAAj1QTFRFs77OAAAAs77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77Os77O5xVY/wAAAL90Uk5TAQAFBzFaeZKhqXtdNQwCOYTG+f/HhjolieTjhyGt/awwHqf+cfQbwD3pWWZiX0z8SCfxJgjRjTbKWNdPux92c8MS+hFGR3d6o8Xf4PLt2LqTZwPuVw8Omi6ysC2cF+oTVJ2bCcsa4RnnKSzUIq+u9m69vFVSkeKPcqvcdTMGIztTiM8cjtvaEHQVFGjrayTEKPMKs7WM0B1AUU483TKQViq+b/fosSuZC6rvlNmieET7UMw30klgPsHC9YWklX3R96EFAAAIq0lEQVR4nO2c+XcURRCAZ9isEINrkiZBIjnIcgYFAwGyQACDgkgIkAtEROUMAokQDwhHyA0kBAICHoDKfcilHArq3+YO+7LbPV3d09016Hu+qZ94tdsf2dnu/qZqZtaybDqsYU6gcxYeAeQsH/4yPmf58YG5nOXLcXTnfPp6/hWs5ddkYnKWb3OUzll+fGAuZ/nxgbmcpfL2UFr4peEj0tNHDH85Y+QrKlivvyLyamZWNqEie1ROrsW/j03JP9zo18YQIPJeHyvFWuKXbDstvwBiOlFQWCTBWuKXxhVHRUwnosXjhGPp/4B5KTJ+gozpxITxEQGWORrUSxMneTGdmDQRxgq+zclTVKCETJkMYuG5V5LtDUxEdgmEtSDsVOnXxEZ0KoCFvPWGBjSOfZPHAt6aNl0HSsj0tzgs763SGXpQQmbMdGM5b5XN0oUSMqvMheVW1Gx9KCGz3bPIhZ0jXPmyKJjDYl3esspNoISUs/uJy1sxMyghMWZyst6KzDWlzo3QWNZb80yhhMyj5zzrrfnm1PnMUqInRIXWUmUjOo6nJrALzKGELASoz7GLMNRFAm+9XYmhVi6GvfUOBkrIu7C3luCoS2FvjcBR34O9tQxHzYK99T6Ouhz2VhWOWgV7S9NX7pgOewsHJQT2lvKpBRzZNiiYFTjqChvEVuOo1cn9hPHWShx1ZWqbor21CkddldymGG9NxVFXp3Y/2ltFOGqqUGC8VVOLgdbSlrUpbDqGmm5z1AQ2jKHWAdTn2HrE/lLVIKy31phT14jrrbXGJwTRtfSZpave+sCUuk5Wb6UZnb7GT2A/lNZb682oa+T11kcbTKAbPrYZLFdv1ZlQP0nNeUG99ak+dCM1OQX11qbNutByd2EE9Qm3bNWDLt/GTE6w3opHaaMOtHEmPVaC3Q62cOAY85lyn7Bihyp0x06NPmHDLjVo02J+rKxPOL7Zm9n8uXafcPtuL+ie0aKxsj5hi/S0Y+4Xtnis5KVhobBwRZTXiXpZFFXYfhz55Vc8Mu/rNPf7NPqEiVzR3n2tyW23oDV//wHPHqykT0jnDh5qm3b48LS2QweVWrvCPiEqJ+oT4nKCPiEy58sH5nJgnxCdC65vAd7yAevj1H/h2OD6lthbmJzMW4icDwg+5+Uts5yCtwxyit7SzAXeCrwVeCvwVuCtwFuBt/47b42NtTd1NDZHo82NHU05LZ0+eCu3q9tdcvd0tXlg5d7qPcIhE9G94KgMK/NWfaakI12Vc8zEW5G+flmDhJD+4yFtbw2ckDOdWHZS01sZg95QQgYzdAQT6lJhOtEVUsaG8lWhhOSfUvTWwdPqUEK+AbCAtyL7dKDxv5Y/CIC3zuhB48dWwVsGl3i4mcB5a0BpSrExyM1bm8VGFCY/H8tcq8ztrT4TKCHHpd7q9Vj7ouhntxqXt3LMoITkSLx11PhiXBWz37LeQtyZsUDsrVZzarfQW7nmUEJolzHeUt7/oOgSeasHQ+0ReKsTAyWkE/ZWC47aAnvLeAkkIscGBdOEozbZILYDR+1ILXzaW1qX4PhoTO0ntLcUrj3Jojm1n9DeQtxL50Q0tZ/Q3vKLynrLpyNgs97y59ui9ywHexZH7eCpDnYdjtoEUOPYdhy1HfaW8c2viYjB3jqHo44VeAu1a3eLvIUzjMhbKBvmCustQc2mEt3ieuuIOfWILay3es3PiHptG/ZWPDJNqZnJFQoURvWmZ5r1tgxreFbcl1qhUL1ldgZ/grmzHKi3jKqNAXotgfWWSWXkXW+ZVHEKfUL9inMYh7V5rF51fDrEziKK6sJq/LX7oLsfXPXW0EFQPrZnItz3YtvCPmFYrUMShsZK+oQq3ZwTA/BYSZ/Qu/PUFxGNlfUJPbpkvbZwrLxPKOzotS45at4ntJ3uI2fenq5c/n3KfcKhOBdrX3eW7pQK3qfSJ8TkhH1CVE7UJ8TlfG3ov2BscH0L8JYPWMBbfmB9QPA50FvoHOwtbE7kLVxO6C1UTuwtTE7mLfPcC9iybQVvGeWC+zICbwXeCrwVeCvwVuCt/6G3yk5++11d3fc/DISUsApzr2hh4fnkxZTo+cKFRd5bkgf2wsU8vo7Pu3hBjpV6qyYmfCJoc6xGgpV46+CP0qeXqg+Lx4q99dPPMqYTu2fqesu6dNkLSsjlS4IDKPCW6hNsuxo0vKXxtF2Fsre0ngzcruit0ivqUEKulCp5S/eJy61bFLyl/3To5k3e3jJ4mne9p7eMLsi1uLDuVbHN6OJG/zG5twye5HViIzuLXN4yfUw8upbBurx11QxKyFVmcrLeumYKJeQajWW9dd2cep2e88yEuGFwZWcoBm+IsKiLxzFqKTHb7k0M9Sa1lGj31NzCUG/VpLC0t9IwUEKSz8yy3lqNo1LXDmlv3cZRb1MLn/rm9uCo8znqc+wvOGo1T3WwtThqLUCNY1E/80RIJewtHJQQ2FuGv2oxFAWwtxB7ixODsLeW46hbYW9l4ahZsLfu4Kh3YG/dxVHvwt66h6Peg73VcB8Dvd9gw97C/TLb0MJ3YxG3uyRueLEhb1VgqBV2CsvWTIgddg+1TbnqrQfm1AfUNuWqt2qMf0KrusamsK56q8SUWmLT4aq3ItpFQSJ+ZZ8xcNdbvxmdwEbbPOoto7vULrKFEV9vbXqoD314ii2MgHqrVPvOryquOuTrLeuRpr8KHjFz3k0deumxHvUxOzk5qtFp3Gp2bOLfIDasfMJRGXaPTfwTxD5R/BGpDU/4sTZXbyVf6vxdBfrHOWispE8Y2fvUi/l0v+ixMEmfsKJYDi0+JBwrbeil5Qt3hWh+mnmfcGc72NgZ077T9a2zYz2vb0Vyn41i5lnlqGe5Ef59zFhJnzCVK7sQXrrqzs3CP//6O+NAmfh9yZy4T4jJifqEuJygT4jN+YDgc2CfEJ2D+oR4LOctX7C8t/zAAt7yAQt5C4/1c0Wlcv8AxvbdwZc3WlsAAAAASUVORK5CYII="/>
+                      </defs>
+                      <style>
+                        tspan { white-space:pre }
+                      </style>
+                      <use id="Background" href="#img1" x="0" y="0" />
+                    </svg> -->
+                  </div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#">Log Meter Reading</a>
+                  <a class="dropdown-item" href="#">Create new full audit</a>
+                  <a class="dropdown-item" href="#">Edit property info</a>
+                </div>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto mt-lg-0 user-nav-dropdown">
+              <!-- <li class="nav-item">
                 <div class="btn-wrap">
                   <button class="button button-lg btn-blue" data-toggle="modal" data-target="#log-meter-modal">Log meter
                     reading</button>
                 </div>
-              </li>
+              </li> -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
                   aria-expanded="false">
@@ -61,8 +94,12 @@
                   </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
-                  <a class="dropdown-item" href="#">Settings</a>
-                  <a class="dropdown-item" href="#">Logout</a>
+                  <a class="dropdown-item" href="#">
+                   <strong>Lindsay Harrington</strong>
+                   <small>Super Admin</small>
+                  </a>
+                  <a class="dropdown-item" href="#">My Profile</a>
+                  <a class="dropdown-item red-link" href="#">Logout</a>
                 </div>
               </li>
             </ul>
@@ -77,14 +114,24 @@
         </div>
         <ul class="list-group">
           <li>
-            <a href="index.html" class="list-group-item">
-              <span class="sidebar-list-icon home-icon"
-                style="background-image: url(assets/images/home-gray.png);"></span> Dashboard
-            </a>
+            <div class="dropdown theme-dropdown">
+               <a class="list-group-item theme-dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+               <span class="sidebar-list-icon home-icon"
+                  style="background-image: url(assets/images/home-gray.png);"></span> Dashboard
+               <span class="down-arrow">
+                  <i class="fa fa-angle-down" aria-hidden="true"></i>
+               </span>
+               </a>
+               <div class="dropdown-menu theme-dropdown-menu">
+                  <a class="dropdown-item" href="global-leak-efficiency-audit.html">Global Leak/Efficiency Audit</a>
+                  <a class="dropdown-item" href="global-leak-status.html">Global Leak Status</a>
+               </div>
+            </div>
           </li>
           <li>
             <div class="dropdown profile-dropdown">
-              <a class="list-group-item dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+              <a class="list-group-item profile-dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <span class="sidebar-list-icon company-icon"
                   style="background-image: url(assets/images/company-gray.png);"></span> Company Profile
@@ -92,7 +139,6 @@
                   <i class="fa fa-angle-down" aria-hidden="true"></i>
                 </span>
               </a>
-
               <div class="dropdown-menu profile-dropdown-menu">
                 <a class="dropdown-item" href="edit-company-profile.html">Edit Profile</a>
                 <a class="dropdown-item" href="company-user.html">Users</a>
@@ -106,25 +152,24 @@
         <div class="sidebar-bottom">
           <ul class="sidebar-bottom-menu">
             <li>
-
               <a href="#" class="fixed-sidebar-menu">
                 Properties <span class="add-icon"><i class="fa fa-plus" aria-hidden="true"></i></span>
               </a>
               <ul class="sidebar-bottom-submenu">
-                <li><a class="active" href="pearl-plaza.html">Pearl Plaza</a></li>
-                <li><a href="#">Property B</a></li>
-                <li><a href="#">Property Delta</a></li>
-                <li><a href="#">Property Gamma</a></li>
-                <li><a href="#">Property Sigma</a></li>
-                <li><a href="#">Property T</a></li>
-                <li><a href="#">Property U</a></li>
-                <li><a href="#">Property V</a></li>
-                <li><a href="#">Property W1</a></li>
-                <li><a href="#">Property W2</a></li>
-                <li><a href="#">Property W3</a></li>
-                <li><a href="#">Property W4</a></li>
-                <li><a href="#">Property W5</a></li>
-                <li><a href="#">Property W6</a></li>
+                <li><a class="active" href="pearl-plaza.html"><span class="list-no list-no-green"></span>Pearl Plaza</a></li>
+                <li><a href="#"><span class="list-no list-no-orange"></span>Property B</a></li>
+                <li><a href="#"><span class="list-no list-no-yellow"></span>Property Delta</a></li>
+                <li><a href="#"><span class="list-no list-no-green"></span>Property Gamma</a></li>
+                <li><a href="#"><span class="list-no list-no-green"></span>Property Sigma</a></li>
+                <li><a href="#"><span class="list-no list-no-purple"></span>Property T</a></li>
+                <li><a href="#"><span class="list-no list-no-red"></span>Property U</a></li>
+                <li><a href="#"><span class="list-no list-no-green"></span>Property V</a></li>
+                <li><a href="#"><span class="list-no list-no-yellow"></span>Property W1</a></li>
+                <li><a href="#"><span class="list-no list-no-orange"></span>Property W2</a></li>
+                <li><a href="#"><span class="list-no list-no-red"></span>Property W3</a></li>
+                <li><a href="#"><span class="list-no list-no-red"></span>Property W4</a></li>
+                <li><a href="#"><span class="list-no list-no-yellow"></span>Property W5</a></li>
+                <li><a href="#"><span class="list-no list-no-yellow"></span>Property W6</a></li>
               </ul>
             </li>
           </ul>
@@ -169,9 +214,9 @@
                               <div class="profile-list">
                                 <ul>
                                   <li>
-                                    <span class="list-icon list-icon-blue">
+                                    <a href="#" class="list-icon list-icon-blue">
                                       <img src="assets/images/plans.png">
-                                    </span>
+                                    </a>
                                     <div class="list-desc">
                                       <span class="list-no list-no-blue">12</span>
                                       <small>Floor Plans</small>
@@ -184,9 +229,9 @@
                               <div class="profile-list">
                                 <ul>
                                   <li>
-                                    <span class="list-icon list-icon-purple">
+                                    <a href="#" class="list-icon list-icon-purple">
                                       <img src="assets/images/units.png">
-                                    </span>
+                                    </a>
                                     <div class="list-desc">
                                       <span class="list-no list-no-purple">28</span>
                                       <small>Units</small>
@@ -199,9 +244,9 @@
                               <div class="profile-list">
                                 <ul>
                                   <li>
-                                    <span class="list-icon list-icon-green">
+                                    <a href="#" class="list-icon list-icon-green">
                                       <img src="assets/images/meters.png">
-                                    </span>
+                                    </a>
                                     <div class="list-desc">
                                       <span class="list-no list-no-green">16</span>
                                       <small>Water meters</small>
@@ -214,9 +259,9 @@
                               <div class="profile-list">
                                 <ul>
                                   <li>
-                                    <span class="list-icon list-icon-orange">
+                                    <a href="#" class="list-icon list-icon-orange">
                                       <img src="assets/images/audits.png">
-                                    </span>
+                                    </a>
                                     <div class="list-desc">
                                       <span class="list-no list-no-orange">4</span>
                                       <small>Audits</small>
@@ -236,15 +281,12 @@
                             Billing Summary
                           </h2>
                         </div>
-
                         <div class="site-content-bottom">
                           <div class="graph-wrap">
-                            <div class="graph-content-empty">
-                              <h2>No Data Available</h2>
+                            <div id="chart_div"></div>
+                            <div class="graph-content-center">
+                               <h2>Usage (Gal)</h2>
                             </div>
-                            <!-- <div id="chart_div"></div>
-                                                            <div class="graph-content-center">
-                                                            <h2>Usage (Gal)</h2> -->
                           </div>
                         </div>
                       </div>
@@ -271,24 +313,18 @@
                           <div class="tab-content" id="water-tabContent" onclick="switchVisible();">
                             <div class="tab-pane fade show active" id="Daily" role="tabpanel"
                               aria-labelledby="Daily-tab">
-
                               <div class="graph-wrap">
-                                <div class="graph-content-empty">
-                                  <h2>No Data Available</h2>
+                                <div class="graph-content">
+                                  <div id="linechart"></div>
+                                  <div class="graph-content-lr">
+                                    <h2>Total Usage: <strong>3566 Gal</strong></h2>
+                                    <h2>Average Usage: <strong>509 Gal/Hour</strong></h2>
+                                  </div>   
                                 </div>
-                                <!-- <div class="graph-content">
-                                                                    <img src="assets/images/graph2.png" alt="graph" class="img-fluid" />
-                                                                    <div class="graph-content-lr">
-                                                                        <h2>Total Usage: <strong>3566 Gal</strong></h2>
-                                                                        <h2>Average Usage: <strong>509 Gal/Hour</strong></h2>
-                                                                    </div>
-                                                                </div> -->
                               </div>
                             </div>
                             <div class="tab-pane fade" id="Weekly" role="tabpanel" aria-labelledby="Weekly-tab">
-
                               <div class="graph-wrap">
-
                                 <div class="graph-content-empty">
                                   <h2>No Data Available</h2>
                                 </div>
@@ -298,10 +334,48 @@
                         </div>
                       </div>
                     </div>
+                    <!-- <div class="col-md-12">
+                      <div class="site-content">
+                        <div class="site-content-top">
+                          <h2 class="site-content-heading">
+                            Water Usage
+                          </h2>
+                          <div id="water-tabs">
+                            <nav>
+                              <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="Daily-tab-two" data-toggle="tab" href="#Daily-two"
+                                  role="tab" aria-controls="Daily-two" aria-selected="true">Daily</a>
+                                <a class="nav-item nav-link" id="Weekly-tab-two" data-toggle="tab" href="#Weekly-two" role="tab"
+                                  aria-controls="Weekly-two" aria-selected="false">Weekly</a>
+                              </div>
+                            </nav>
+                          </div>
+                        </div>
+                        <div class="site-content-bottom">
+                          <div class="tab-content" id="water-tabContent">
+                            <div class="tab-pane fade show active" id="Daily-two" role="tabpanel"
+                              aria-labelledby="Daily-tab-two">
+                              <div class="graph-wrap">
+                                <div class="graph-content">
+                                  <div id="chart"></div>  
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tab-pane fade" id="Weekly-two" role="tabpanel" aria-labelledby="Weekly-tab-two">
+                              <div class="graph-wrap">
+                                <div class="graph-content-empty">
+                                  <h2>No Data Available</h2>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
                     <div class="col-md-12">
                       <div class="table-wrap">
                         <h2 class="table-heading">Water Meters</h2>
-                        <div class="water-meter-table" style="overflow-x: auto">
+                        <div class="water-meter-table table-scrollbar" style="overflow-x: auto">
                           <table class="table">
                             <thead>
                               <tr>
@@ -329,7 +403,6 @@
                                           tspan {
                                             white-space: pre
                                           }
-
                                           .shp0 {
                                             fill: #43525c
                                           }
@@ -354,29 +427,6 @@
                                         Emergency leaks detected!</h2>
                                       <button class="button leak-btn">Leak Audit</button>
                                     </div>
-                                    <!-- <div id="water-tabs" class="mb-4">
-                                        <nav>
-                                            <div class="nav nav-tabs nav-fill col-md-2 mb-4" id="nav-tab" role="tablist">
-                                                <a class="nav-item nav-link active" id="Acc-Daily1-tab" data-toggle="tab" href="#Acc-Daily1" role="tab" aria-controls="Acc-Daily1" aria-selected="true">Daily</a>
-                                                <a class="nav-item nav-link" id="Acc-Weekly1-tab" data-toggle="tab" href="#Acc-Weekly1" role="tab" aria-controls="Acc-Weekly1" aria-selected="false">Weekly</a>
-                                            </div>
-                                        </nav>
-                                        <div class="tab-content" id="water-tabContent">
-                                            <div class="tab-pane fade show active" id="Acc-Daily1" role="tabpanel" aria-labelledby="Acc-Daily1-tab">
-                                                <div class="graph-wrap">
-                                                    <img src="assets/images/graph3.png" alt="graph" class="img-fluid">
-                                                </div>    
-                                            </div>
-                                            <div class="tab-pane fade" id="Acc-Weekly1" role="tabpanel" aria-labelledby="Acc-Weekly1-tab">
-                                                <div class="graph-wrap">
-                                                    <div class="graph-content-empty">
-                                                        <h2>No Data Available</h2>
-                                                    </div>
-                                                </div>    
-                                            </div>
-                                            
-                                        </div>  
-                                    </div>  -->
                                   </div>
                                 </td>
                               </tr>
@@ -396,7 +446,6 @@
                                           tspan {
                                             white-space: pre
                                           }
-
                                           .shp0 {
                                             fill: #43525c
                                           }
@@ -416,7 +465,6 @@
                               <tr class="accordion-content">
                                 <td colspan="5">
                                   <div id="accordiontwo" class="collapse">
-
                                     <div id="water-tabs" class="mb-4">
                                       <nav>
                                         <div class="nav nav-tabs nav-fill col-md-2 mb-4" id="nav-tab" role="tablist">
@@ -438,10 +486,9 @@
                                         <div class="tab-pane fade" id="Acc-Weekly2" role="tabpanel"
                                           aria-labelledby="Acc-Weekly2-tab">
                                           <div class="graph-wrap">
-                                            <img src="assets/images/graph4.png" alt="graph" class="img-fluid">
+                                            <div id="combo_chart"></div>
                                           </div>
                                         </div>
-
                                       </div>
                                     </div>
                                   </div>
@@ -463,7 +510,6 @@
                                           tspan {
                                             white-space: pre
                                           }
-
                                           .shp0 {
                                             fill: #43525c
                                           }
@@ -499,17 +545,15 @@
                                         <div class="tab-pane fade show active" id="Acc-Daily3" role="tabpanel"
                                           aria-labelledby="Acc-Daily3-tab">
                                           <div class="graph-wrap">
-                                            <img src="assets/images/graph3.png" alt="graph" class="img-fluid">
+                                            <div id="columnchart"></div>
                                           </div>
                                         </div>
                                         <div class="tab-pane fade" id="Acc-Weekly3" role="tabpanel"
                                           aria-labelledby="Acc-Weekly3-tab">
-
                                           <div class="graph-content-empty">
                                             <h2>No Data Available</h2>
                                           </div>
                                         </div>
-
                                       </div>
                                     </div>
                                   </div>
@@ -765,7 +809,6 @@
                                     <a href="#" data-toggle="modal" data-target="#edit-user-modal" class="edit-btn-mob"
                                       style="display: none;">Edit</a>
                                   </div>
-
                                 </td>
                                 <td>
                                   <div class="info-wrap">
@@ -1145,7 +1188,6 @@
                                             </div>
                                           </td>
                                         </tr>
-
                                       </tbody>
                                     </table>
                                   </div>
@@ -3305,12 +3347,25 @@
                                 </div>
                               </div>
                               <div class="tab-pane fade" id="Audits" role="tabpanel" aria-labelledby="Audits-tab">
-                                <div class="table-wrap">
+                                <div class="table-wrap audit-table-desktop">
                                   <div class="table-head">
                                     <h2 class="table-heading">Audits</h2>
-                                    <a href="full-audit.html" class="new-btn">
+                                    <!-- <a href="full-audit.html" class="new-btn">
                                       <i class="fa fa-plus" aria-hidden="true"></i> New Property
-                                    </a>
+                                    </a> -->
+                                    <div class="dropdown select-meter-dropdown">
+                                      <a href="#" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Select Meter
+                                        <span class="down-arrow">
+                                          <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        </span>
+                                      </a>
+                                      <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Meter 1</a>
+                                        <a class="dropdown-item" href="#">Meter 2</a>
+                                        <a class="dropdown-item" href="#">Meter 3</a>
+                                      </div>
+                                    </div>
                                   </div>
 
                                   <div class="audit-table table-scrollbar" style="overflow-x: auto">
@@ -3364,6 +3419,7 @@
                                                 </div>
                                               </div>
                                               <button class="button button-sm btn-white"> Edit</button>
+                                              
                                             </div>
                                           </td>
                                           <td>
@@ -3399,7 +3455,11 @@
                                                   <span class="progress-percentage">80%</span>
                                                 </div>
                                               </div>
-                                              <a href="full-audit.html" class="button button-sm btn-white"> Edit</a>
+                                              <div class="btn-wrap">
+                                                <a href="full-audit.html" class="button button-sm btn-white mr-2"> Edit</a>
+                                                <button class="button btn-white" data-toggle="tooltip" data-placement="right" title="" data-original-title="Complete the audit">Complete Audit</button>
+                                              </div>
+                                              
                                             </div>
                                           </td>
                                           <td>
@@ -3548,7 +3608,7 @@
                                     </table>
                                   </div>
                                 </div>
-                                <div class="table-wrap">
+                                <div class="table-wrap leak-audit-desktop">
                                   <div class="table-head">
                                     <h2 class="table-heading">Leak Audit Required</h2>
                                   </div>
@@ -3588,6 +3648,155 @@
                                     </table>
                                   </div>
                                 </div>
+                                <!-- audit-table-mobile -->
+                                <div class="audit-table-mobile" style="display: none;">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      <div class="audit-table-top">
+                                        <div class="audit-table-top-lt">
+                                          <h2 class="audit-heading">Audits</h2>
+                                        </div>
+                                        <div class="audit-table-top-rt">
+                                          <a href="#" class="new-btn">
+                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                            New full audit
+                                          </a>
+                                          <div class="dropdown select-meter-dropdown">
+                                            <a href="#" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              Select Meter
+                                              <span class="down-arrow">
+                                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                              </span>
+                                            </a>
+                                            <div class="dropdown-menu">
+                                              <a class="dropdown-item" href="#">Meter 1</a>
+                                              <a class="dropdown-item" href="#">Meter 2</a>
+                                              <a class="dropdown-item" href="#">Meter 3</a>
+                                            </div>
+                                          </div>
+                                        </div> 
+                                      </div>
+                                    </div>
+                                    <div class="col-md-12 col-lg-12">
+                                      <div class="audit-table-card wrapper-bg">
+                                        <div class="audit-card-top table-head">
+                                            <h2 class="table-heading">Full Audit</h2>
+                                            <a href="#" title="delete">
+                                              <button class="no-border-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                            </a>
+                                        </div>
+                                        <div class="audit-card-content">
+                                          <div class="audit-detail-wrap">
+                                            <ul>
+                                              <li>
+                                                <div class="icon-wrap icon-blue"><img src="assets/images/full-audit.png" alt="img"></div>
+                                                <div class="title">
+                                                  <h2>Full Audit</h2>
+                                                  <span class="ver-wrap">ver.3</span>
+                                                </div>
+                                                <small class="audit-date">10/14/2020 - 10/14/2020</small>
+                                                <div class="audit-pro-fix-wrap">
+                                                  <div class="audit-pro-fix-content">
+                                                    <h2 class="pro-fix-heading">Audit Progress:</h2>
+                                                     <div class="property-status">
+                                                       <div class="progress-bar">
+                                                           <label for="file"><small><span class="list-no list-no-green">Complete</span></small></label>
+                                                       </div>
+                                                       <a href="#" class="button button-sm btn-white">View</a> 
+                                                   </div>
+                                                  </div> 
+                                                  <div class="audit-pro-fix-content">
+                                                    <h2 class="pro-fix-heading">Fix:</h2>
+                                                    <div class="property-status">
+                                                      <div class="progress-bar">
+                                                          <label for="file"><small><span class="list-no list-no-orange">In Progress</span></small></label>
+                                                          <progress id="file" value="20.0" max="100"> 20.0%
+                                                          </progress>
+                                                          <span class="progress-percentage">20%</span>
+                                                      </div>
+                                                      <a href="#" class="button button-sm btn-white">Edit</a>
+                                                    </div>
+                                                 </div>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-12 col-lg-12">
+                                      <div class="audit-table-card wrapper-bg">
+                                        <div class="audit-card-top table-head">
+                                            <h2 class="table-heading">Leak Audit</h2>
+                                            <a href="#" title="delete">
+                                              <button class="no-border-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                            </a>
+                                        </div>
+                                        <div class="audit-card-content">
+                                          <div class="audit-detail-wrap">
+                                            <ul>
+                                              <li>
+                                                <div class="icon-wrap icon-blue"><img src="assets/images/full-audit.png" alt="img"></div>
+                                                <div class="title">
+                                                  <h2>Leak Audit</h2>
+                                                  <span class="ver-wrap">Meter 1</span>
+                                                </div>
+                                                <small class="audit-date">04/14/2021 - 04/15/2021</small>
+                                                <div class="audit-pro-fix-wrap">
+                                                  <div class="audit-pro-fix-content">
+                                                    <h2 class="pro-fix-heading">Audit Progress:</h2>
+                                                     <div class="property-status">
+                                                       <div class="progress-bar">
+                                                           <label for="file"><small><span class="list-no list-no-green">Complete</span></small></label>
+                                                       </div>
+                                                       <a href="#" class="button button-sm btn-white">View</a> 
+                                                     </div>
+                                                  </div>
+                                                  <div class="audit-pro-fix-content">
+                                                    <h2 class="pro-fix-heading">Fix:</h2>
+                                                    <div class="property-status">
+                                                      <div class="progress-bar">
+                                                        <span class="no-data list-no">N/A</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-12 col-lg-12">
+                                      <div class="audit-table-card wrapper-bg">
+                                        <div class="audit-card-content">
+                                          <div class="audit-detail-wrap">
+                                            <h5 class="empty-data">No records found.</h5>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      
+                                    </div>
+                                    <div class="col-md-12" id="pag-wrap">
+                                      <ul class="pagination">
+                                        <li class="page-item">
+                                            <nav class="pagination" role="navigation" aria-label="pager">
+                                                <span class="page current">1</span>
+                                                <span class="page">
+                                                  <a href="#">2</a>
+                                                </span>
+                                                <span class="page">
+                                                  <a href="#">3</a>
+                                                </span>
+                                                <span class="page">
+                                                  <a href="#">4</a>
+                                                </span>
+                                            </nav>
+                                        </li>
+                                    </ul>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -3601,12 +3810,11 @@
           </div>
         </div>
       </div>
-
     </div>
     <!-- /#page-content-wrapper -->
-
   </div>
   <!-- /#wrapper -->
+
   <!--Log Meter Modal -->
   <div class="modal fade" id="log-meter-modal" tabindex="-1" role="dialog" aria-labelledby="log-meter-modalTitle"
     aria-hidden="true">
@@ -3783,7 +3991,6 @@
     </div>
   </div>
 
-
   <!--New Meter Modal -->
   <div class="modal fade" id="new-meter-modal" tabindex="-1" role="dialog" aria-labelledby="new-meter-modalTitle"
     aria-hidden="true">
@@ -3907,7 +4114,6 @@
     </div>
   </div>
 
-
   <!--New Meter Modal -->
   <div class="modal fade" id="new-floorplan-modal" tabindex="-1" role="dialog"
     aria-labelledby="new-floorplan-modalTitle" aria-hidden="true">
@@ -3999,7 +4205,6 @@
       </div>
     </div>
   </div>
-
 
   <!-- Edit-User-Modal -->
   <div class="modal fade" id="edit-user-modal" tabindex="-1" role="dialog" aria-labelledby="edit-user-modalLabel"
@@ -4267,7 +4472,6 @@
     </div>
   </div>
 
-
   <!-- new-overage-Modal -->
   <div class="modal fade" id="new-overage-modal" tabindex="-1" role="dialog" aria-labelledby="new-overage-modalLabel"
     aria-hidden="true">
@@ -4326,7 +4530,6 @@
       </div>
     </div>
   </div>
-
 
   <!-- Add-property-detail-Modal -->
   <div class="modal fade" id="addproperty-detail-modal" tabindex="-1" role="dialog"
@@ -4430,7 +4633,6 @@
     </div>
   </div>
 
-
   <!-- report-Modal -->
   <div class="modal fade" id="report-modal" tabindex="-1" role="dialog" aria-labelledby="report-modalLabel"
     aria-hidden="true">
@@ -4477,7 +4679,6 @@
       </div>
     </div>
   </div>
-
 
   <!-- water-efficiency-Modal -->
   <div class="modal fade" id="water-efficiency-modal" tabindex="-1" role="dialog"
@@ -4591,16 +4792,15 @@
     </div>
   </div>
 
-
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="assets/js/custom.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.8.6/apexcharts.min.js"></script>
 
-
-
+  <!-- BillingSummary Chart Js   -->
   <script>
     google.charts.load('current', {
       packages: ['corechart', 'bar']
@@ -4622,7 +4822,7 @@
       ]);
 
       var options = {
-        height: 160,
+        height: 150,
         legend: {
           position: "none"
         },
@@ -4655,6 +4855,322 @@
     }
   </script>
 
+  <!-- Linechart Js -->
+  <script type="text/javascript">
+        var options = {
+          series: [{
+          data: [900, 800, 300, 700, 400]
+        }],
+          chart: {
+          type: 'bar',
+          height: 150,
+        },
+        plotOptions: {
+          bar: {
+            horizontal: false,
+            columnWidth: '12%',
+            endingShape: "rounded"
+          },
+        },
+        dataLabels: {
+          enabled: false
+        },
+        colors: ['#55a5fe'],
+        stroke: {
+          show: true,
+          curve: 'smooth',
+          width: 2,
+          colors: ['transparent']
+        },
+        fill: {
+          type: 'gradient',
+          gradient: {
+            shade: 'light',
+            gradientToColors: ["#6ce4ff"],
+            type: 'vertical',
+            stops: [0, 50, 100]
+          },
+        },
+        xaxis: {
+          categories: ['12:00 AM', '1:00 AM', '2:00 AM', '3:00 AM', '4:00 AM'],
+        },
+        tooltip: {
+          y: {
+            formatter: function (val) {
+              return "$ " + val + " thousands"
+            }
+          }
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#linechart"), options);
+        chart.render();
+  </script>
+
+  <!-- Alertlab Chart Js -->
+  <script>
+    var options = {
+          series: [{
+          name: 'TEAM A',
+          type: 'column',
+          data: [50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 15, 15, 15, 15, 15]
+        }, {
+          name: 'Actual Usage',
+          type: 'column',
+          data: [270, 230, 220, 210, 250, 260, 350, 150, 220, 290, 200, 205, 210, 105, 90, 80, 150, 250, 240, 150, 170, 180, 80, 110, 380]
+        }, {
+          name: 'Expected High',
+          type: 'area',
+          data: [220, 380, 360, 370, 180, 250, 220, 300, 190, 200, 170, 250, 210, 280, 160, 250, 220, 280, 240, 160, 170, 180, 380, 360, 110]
+        }],
+          chart: {
+          height: 300,
+          stacked: true,
+        },
+        colors: ['#cf2938', '#1f5175', '#768fa9'],
+        stroke: {
+          show: true,
+          curve: 'smooth',
+          colors: ['transparent'],
+          width: [2, 2, 2]
+        },
+        plotOptions: {
+          bar: {
+            horizontal: false,
+            columnWidth: '50%'
+          }
+        },
+        
+        fill: {
+          opacity: [1, 1, 0.8],
+          gradient: {
+            shade: 'light',
+            type: "vertical",
+          }
+        },
+        xaxis: {
+          categories: ['04:00', '08:00', '12:00', '16:00', '20:00', '29 Sep', '04:00', '08:00', '12:00'],
+        },
+        states: {
+            hover: {
+                filter: {
+                    type: 'none',
+                }
+            },
+        },
+        tooltip: {
+          shared: true,
+          intersect: false,
+          y: {
+            formatter: function (y) {
+              if (typeof y !== "undefined") {
+                return y.toFixed(0) + " points";
+              }
+              return y;
+        
+            }
+          }
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+  // var options = {
+  //         series: [{
+  //         name: 'TEAM A',
+  //         type: 'bar',
+  //         data: [270, 230, 220, 210, 250, 260, 350, 150, 220, 290, 200, 205, 210, 105, 90, 80, 150, 250]
+  //       }, {
+  //         name: 'TEAM B',
+  //         type: 'bar',
+  //         data: [30, 30, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 15, 15, 10, 10]
+  //       }, {
+  //         name: 'TEAM C',
+  //         type: 'area',
+  //         data: [250, 390, 350, 370, 180, 250, 220, 300, 190, 200, 170, 250, 210, 280, 250, 160, 180, 380]
+  //       }],
+  //         chart: {
+  //         height: 350,
+  //         // type: 'bar',
+  //         stacked: true,
+  //       },
+  //       stroke: {
+  //         width: [0, 2, 5],
+  //         curve: 'smooth'
+  //       },
+  //       plotOptions: {
+  //         bar: {
+  //           columnWidth: '50%'
+  //         }
+  //       },
+        
+  //       fill: {
+  //         opacity: [1, 1, 1],
+  //         gradient: {
+  //           inverseColors: false,
+  //           shade: 'light',
+  //           type: "vertical",
+  //         }
+  //       },
+  //       labels: ['01/01/2003', '02/01/2003', '03/01/2003', '04/01/2003', '05/01/2003', '06/01/2003', '07/01/2003',
+  //         '08/01/2003', '09/01/2003', '10/01/2003', '11/01/2003'
+  //       ],
+  //       markers: {
+  //         size: 0
+  //       },
+  //       xaxis: {
+  //         type: 'datetime'
+  //       },
+  //       // yaxis: {
+  //       //   title: {
+  //       //     text: 'Points',
+  //       //   },
+  //       //   min: 0
+  //       // },
+  //       tooltip: {
+  //         shared: true,
+  //         intersect: false,
+  //         y: {
+  //           formatter: function (y) {
+  //             if (typeof y !== "undefined") {
+  //               return y.toFixed(0) + " points";
+  //             }
+  //             return y;
+        
+  //           }
+  //         }
+  //       }
+  //       };
+
+  //       var chart = new ApexCharts(document.querySelector("#chart"), options);
+  //       chart.render();
+  
+  </script>
+
+  <!-- Columnchart Js -->
+  <script type="text/javascript">
+        var options = {
+          series: [{
+          data: [250, 400, 450, 150, 450, 600, 700, 990]
+        }],
+          chart: {
+          type: 'bar',
+          height: 300,
+        },
+        plotOptions: {
+          bar: {
+            horizontal: false,
+            columnWidth: '55%',
+          },
+        },
+        dataLabels: {
+          enabled: false
+        },
+        colors: ["#e7f2ff"],
+        stroke: {
+          show: true,
+          curve: 'smooth',
+          width: 2,
+          colors: ['transparent']
+        },
+        fill: {
+          type: 'gradient',
+          gradient: {
+            shade: 'light',
+            gradientToColors: ["#97d1ff"],
+            type: 'vertical',
+          },
+        },
+        xaxis: {
+          categories: ['12:00 AM Monday', '1:00 AM Monday', '2:00 AM Monday', '3:00 AM Monday', '4:00 AM Monday', '5:00 AM Monday', '6:00 AM Monday', '7:00 AM Monday', '8:00 AM Monday'],
+        },
+        states: {
+            hover: {
+                filter: {
+                    type: 'none',
+                }
+            },
+        },
+        tooltip: {
+          y: {
+            formatter: function (val) {
+              return "$ " + val + " thousands"
+            }
+          }
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#columnchart"), options);
+        chart.render();
+  </script>
+
+  <!-- Combochart Js -->
+  <script>
+   var options = {
+          series: [{
+          name: 'Mon, 07/07/20',
+          data: [700, 550, 600, 750, 400, 600, 380, 510, 680, 650, 450, 550, 505, 680, 750, 450, 650, 550, 600, 700, 450, 610, 550, 450]
+        }, {
+          name: 'Tue, 08/09/20',
+          data: [800, 600, 550, 700, 380, 580, 400, 490, 850, 450, 650, 650, 705, 580, 550, 650, 950, 650, 650, 650, 440, 600, 500, 650]
+        }, {
+          name: 'Wed, 09/09/20',
+          data: [900, 450, 580, 600, 350, 550, 200, 450, 600, 550, 550, 450, 605, 880, 950, 550, 850, 850, 500, 600, 400, 550, 510, 350]
+        }, {
+          name: 'Thu, 10/09/20',
+          data: [650, 470, 700, 650, 360, 650, 210, 460, 580, 250, 250, 350, 405, 400, 400, 400, 500, 400, 400, 750, 420, 650, 530, 450]
+        }, {
+          name: 'Fri, 11/09/20',
+          data: [480, 120, 150, 400, 100, 350, 100, 300, 550, 50, 150, 250, 150, 200, 450, 150, 200, 350, 300, 300, 430, 400, 350, 80]
+        }, {
+          name: 'Sat, 12/09/20',
+          data: [450, 50, 60, 350, 70, 120, 10, 100, 60, 50, 30, 50, 105, 680, 150, 50, 50, 100, 50, 150, 100, 300, 150, 50]
+        }, {
+          name: 'Sun, 13/09/20',
+          data: [510, 60, 110, 40, 10, 200, 30, 10, 10, 20, 450, 40, 50, 80, 20, 100, 10, 50, 600, 100, 50, 350, 10, 10]
+        }],
+        colors: ["#63b3f7", "#fbb848", "#54dd9a", "#ef8d9d", "#39cfe2", "#d394e3", "#c4ce52"],
+          chart: {
+          type: 'bar',
+          height: 300
+        },
+        plotOptions: {
+          bar: {
+            horizontal: false,
+            columnWidth: '80%',
+            endingShape: 'rounded'
+          },
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          show: true,
+          width: 2,
+          colors: ['transparent']
+        },
+        xaxis: {
+          categories: ['12:00 AM', '1:00 AM', '2:00 AM', '3:00 AM', '4:00 AM', '5:00 AM', 
+          '6:00 AM', '7:00 AM', '8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', 
+          '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM', 
+          '8:00 PM', '9:00 PM', '10:00 PM', '11:00 PM'],
+        },
+        fill: {
+          opacity: 1
+        },
+        tooltip: {
+          y: {
+            formatter: function (val) {
+              return "$ " + val + " thousands"
+            }
+          }
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#combo_chart"), options);
+        chart.render();
+  </script>
+
   <script>
     // check-select-js
     $(document).ready(function () {
@@ -4684,6 +5200,6 @@
       $('[data-toggle="tooltip"]').tooltip()
     });
   </script>
-</body>
 
+</body>
 </html>
